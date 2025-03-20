@@ -11,21 +11,33 @@
 
 @font-face {
   font-family: "MyCustomFont";
-  src: url("/fonts/Reospec.woff2") format("opentype");
+  src: url("/fonts/Reospec.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: "MyCustomFont";
-  src: url("/fonts/Reospec.woff2") format("opentype");
+  src: url("/fonts/Reospec.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
 }
 @font-face {
   font-family: "MyCustomFont";
-  src: url("/fonts/Reospec.woff2") format("opentype");
+  src: url("/fonts/Reospec.woff2") format("woff2");
   font-weight: 400;
   font-style: italic;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
 }
 h1,
 h2,
@@ -47,7 +59,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1.5;
   background-color: #0A0908;
 }
@@ -78,98 +90,223 @@ body {
   background-attachment: fixed;
 }
 #hero #div2 {
-  margin-top: 10px;
   grid-area: 1/3/2/11;
-  background-color: rgba(17, 222, 158, 0.5);
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(12.7px);
-  -webkit-backdrop-filter: blur(12.7px);
+  background-color: #0A0908;
+  border-radius: 2px 2px 50px 50px;
 }
 #hero #div3 {
   grid-area: 12/1/13/3;
-  background-color: rgba(45, 100, 175, 0.5);
-  border-radius: 50px;
+  border-radius: 0 50px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero #div3 h1 {
+  font-family: "MyCustomFont", sans-serif;
+  color: #F2F4F3;
+  text-align: center;
+  letter-spacing: 0.2px;
+  font-weight: normal;
+  -webkit-text-stroke: 2px #F2F4F3;
 }
 #hero #div4 {
-  grid-area: 11/12/13/13;
-  background-color: rgba(151, 178, 174, 0.5);
-  border-radius: 50px;
+  grid-area: 12/12/13/13;
+  background-color: #0A0908;
+  border-radius: 50px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#hero #div4 h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  color: #F2F4F3;
+  text-align: center;
+  letter-spacing: 0.1px;
 }
 #hero #div5 {
-  grid-area: 4/3/10/11;
+  grid-area: 3/3/9/11;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 #hero #div5 h1 {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   font-family: "MyCustomFont", sans-serif;
   font-weight: normal;
   -webkit-text-stroke: 15px #F2F4F3;
   color: #F2F4F3;
-  font-size: clamp(4rem, 8vw, 10rem);
+  font-size: clamp(8rem, 10vw, 12rem);
   text-align: center;
   line-height: 0.8;
   letter-spacing: 0.1px;
 }
-
+#hero #div5 h1 span {
+  text-align: center;
+  margin-left: 15px;
+}
+#hero header {
+  background-color: transparent;
+  padding: 1rem 2rem;
+}
+#hero header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#hero header .logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #F2F4F3;
+  text-decoration: none;
+}
+#hero header .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+#hero header .nav-links li a {
+  text-decoration: none;
+  color: #F2F4F3;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+#hero header .nav-links li a:hover {
+  color: #22333B;
+}
+#hero header .hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#hero header .hamburger span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #F2F4F3;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
 @media (max-width: 576px) {
-  #div2 {
+  #hero #div2 {
     grid-area: 1/2/2/12;
   }
-  #div5 {
+  #hero #div5 {
     grid-area: 3/2/10/12;
   }
-  #div3,
-  #div4 {
+  #hero #div3,
+  #hero #div4 {
     grid-area: auto;
     width: 100%;
     height: 100px;
   }
 }
 @media (max-width: 767px) {
-  #div2 {
-    grid-area: 1/1/2/13 !important;
-    margin-left: 10px;
-    margin-right: 10px;
-    border-radius: 34px 34px 16px 16px !important;
+  #hero #cssportal-grid {
+    grid-template-rows: repeat(11, 1fr) 50px !important;
   }
-  #div5 {
+  #hero #cssportal-grid #div2 {
+    grid-area: 1/11/2/13 !important;
+    border-radius: 0 0 0 50px !important;
+  }
+  #hero #cssportal-grid #div5 {
     grid-area: 4/2/10/12;
   }
-  #div3 {
-    grid-area: 12/1/13/4;
+  #hero #cssportal-grid #div5 h1 {
+    letter-spacing: 1px !important;
+    font-size: clamp(10rem, 10vw, 12rem) !important;
   }
-  #div4 {
-    grid-area: 11/11/13/13;
+  #hero #cssportal-grid #div3 {
+    grid-area: 11/6/11/8 !important;
+  }
+  #hero #cssportal-grid #div4 {
+    border-radius: 35px 35px 0 0 !important;
+    grid-area: 12/3/13/11 !important;
+    align-items: flex-start;
+  }
+  #hero #cssportal-grid #div4 h1 {
+    margin-top: 10px;
+  }
+  #hero #cssportal-grid .logo {
+    display: none;
+  }
+  #hero #cssportal-grid header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero #cssportal-grid .hamburger {
+    display: flex !important;
+  }
+  #hero #cssportal-grid .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(10, 9, 8, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  #hero #cssportal-grid nav.active .nav-links {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+  #hero #cssportal-grid nav.active .hamburger span:nth-child(1) {
+    transform: translateY(8px) rotate(46deg);
+  }
+  #hero #cssportal-grid nav.active .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  #hero #cssportal-grid nav.active .hamburger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-46deg);
   }
 }
 @media (max-width: 991px) {
-  #div2 {
+  #hero #div2 {
     grid-area: 1/3/2/11;
   }
-  #div5 {
+  #hero #div5 {
     grid-area: 4/3/10/11;
   }
-  #div3 {
+  #hero #div3 {
     grid-area: 12/1/13/4;
   }
-  #div4 {
+  #hero #div4 {
     grid-area: 11/11/13/13;
   }
 }
-@media (min-width: 1200px) {
-  #div2 {
+@media (max-width: 1200px) {
+  #hero #div2 {
     grid-area: 1/3/2/11;
   }
-  #div5 {
+  #hero #div5 {
     grid-area: 4/3/10/11;
   }
-  #div3 {
+  #hero #div5 h1 {
+    flex-direction: column !important;
+  }
+  #hero #div3 {
     grid-area: 12/1/13/3;
   }
-  #div4 {
+  #hero #div4 {
     grid-area: 11/12/13/13;
   }
 }/*# sourceMappingURL=style.css.map */

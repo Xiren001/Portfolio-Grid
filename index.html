@@ -35,16 +35,48 @@
             <div id="cssportal-grid">
                 <div id="div1"></div>
                 <div id="div2">
-                
+                    <header>
+                        <nav>
+                            <!-- Logo Section -->
+                            <div class="logo">
+                                <a href="#">XIREN</a>
+                            </div>
+
+                            <!-- Navigation Links -->
+                            <ul class="nav-links">
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+
+                            <!-- Hamburger Menu for Mobile -->
+                            <button class="hamburger" aria-label="Toggle Navigation">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </nav>
+                    </header>
                 </div>
-                <div id="div3">div3</div>
-                <div id="div4">div4</div>
+                <div id="div3">
+                    <h1>XIREN.</h1>
+                </div>
+                <div id="div4">
+                    <h1>
+                        SCROLL
+                    </h1>
+                </div>
                 <div id="div5">
-                    <h1>Front end Developer</h1>
+                    <h1>
+                        <span>Front</span>
+                        <span> End</span>
+                        <span>Developer</span>
+                    </h1>
                 </div>
             </div>
         </div>
-
     </section>
 
 
@@ -168,12 +200,27 @@
 
 
     <script>
+
+        const heading = document.querySelector('#div5 h1');
+        const mediaQuery = window.matchMedia('(max-width: 767px)');
+
+        function updateHeading(e) {
+            if (e.matches) {
+                heading.innerHTML = '<span>Fro</span> <span>End</span> <span>Dev</span>';
+            } else {
+                heading.innerHTML = '<span>Front</span> <span>end</span> <span>Developer</span>';
+            }
+        }
+
+        updateHeading(mediaQuery);
+        mediaQuery.addEventListener('change', updateHeading);
+
+
+        const navbar = document.querySelector('nav');
 const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('active');
+  navbar.classList.toggle('active');
 });
 
     </script>
