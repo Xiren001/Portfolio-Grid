@@ -84,7 +84,7 @@ body {
 #hero #div1 {
   grid-area: 1/1/13/13;
   border-radius: 50px;
-  background-image: url("/image/15405592.png");
+  background-image: url("/image/14310340.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -93,6 +93,7 @@ body {
   grid-area: 1/3/2/11;
   background-color: #0A0908;
   border-radius: 2px 2px 50px 50px;
+  margin-left: 30px;
 }
 #hero #div3 {
   grid-area: 12/1/13/3;
@@ -123,6 +124,7 @@ body {
   color: #F2F4F3;
   text-align: center;
   letter-spacing: 0.1px;
+  font-size: clamp(1rem, 1.5vw, 6rem);
 }
 #hero #div5 {
   grid-area: 3/3/9/11;
@@ -131,7 +133,7 @@ body {
   align-items: center;
 }
 #hero #div5 h1 {
-  margin-left: 15px;
+  margin-left: 55px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -148,16 +150,22 @@ body {
 }
 #hero #div5 h1 span {
   text-align: center;
-  margin-left: 15px;
+}
+#hero #div6 {
+  grid-area: 1/1/2/4;
+  display: none;
+  transition: all 0.3s ease;
 }
 #hero header {
   background-color: transparent;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
+  height: 100%;
 }
 #hero header nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100%;
 }
 #hero header .logo a {
   font-size: 1.8rem;
@@ -169,6 +177,7 @@ body {
   list-style: none;
   display: flex;
   gap: 2rem;
+  transition: all 0.3s ease;
 }
 #hero header .nav-links li a {
   text-decoration: none;
@@ -217,14 +226,12 @@ body {
   }
   #hero #cssportal-grid #div2 {
     grid-area: 1/11/2/13 !important;
-    border-radius: 0 0 0 50px !important;
+    border-radius: 0 0 0 30px !important;
+    margin-left: 0;
   }
-  #hero #cssportal-grid #div5 {
-    grid-area: 4/2/10/12;
-  }
-  #hero #cssportal-grid #div5 h1 {
-    letter-spacing: 1px !important;
-    font-size: clamp(10rem, 10vw, 12rem) !important;
+  #hero #cssportal-grid #div2 .nav-links {
+    width: 100%;
+    justify-content: center;
   }
   #hero #cssportal-grid #div3 {
     grid-area: 11/6/11/8 !important;
@@ -236,9 +243,23 @@ body {
   }
   #hero #cssportal-grid #div4 h1 {
     margin-top: 10px;
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    transform: none;
   }
-  #hero #cssportal-grid .logo {
-    display: none;
+  #hero #cssportal-grid #div5 {
+    grid-area: 4/2/10/12;
+  }
+  #hero #cssportal-grid #div5 h1 {
+    margin-left: 30px;
+    letter-spacing: 1px !important;
+    font-size: clamp(10rem, 10vw, 12rem) !important;
+  }
+  #hero #cssportal-grid #div6 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
   }
   #hero #cssportal-grid header {
     display: flex;
@@ -247,27 +268,51 @@ body {
   }
   #hero #cssportal-grid .hamburger {
     display: flex !important;
+    z-index: 999;
+  }
+  @keyframes spreadIn {
+    0% {
+      clip-path: circle(0% at 100% 0%);
+      opacity: 0;
+    }
+    100% {
+      clip-path: circle(150% at 100% 0%);
+      opacity: 1;
+    }
+  }
+  @keyframes spreadOut {
+    0% {
+      clip-path: circle(150% at 100% 0%);
+      opacity: 1;
+    }
+    100% {
+      clip-path: circle(0% at 100% 0%);
+      opacity: 0;
+    }
   }
   #hero #cssportal-grid .nav-links {
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(10, 9, 8, 0.95);
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 2rem 0;
-    transform: translateY(-100%);
-    opacity: 0;
     visibility: hidden;
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    clip-path: circle(0% at 100% 0%);
+    z-index: 998;
   }
   #hero #cssportal-grid nav.active .nav-links {
-    transform: translateY(0);
-    opacity: 1;
     visibility: visible;
+    animation: spreadIn 0.5s ease-in-out forwards;
+  }
+  #hero #cssportal-grid nav:not(.active) .nav-links {
+    animation: spreadOut 0.5s ease-in-out forwards;
   }
   #hero #cssportal-grid nav.active .hamburger span:nth-child(1) {
     transform: translateY(8px) rotate(46deg);
@@ -282,6 +327,13 @@ body {
 @media (max-width: 991px) {
   #hero #div2 {
     grid-area: 1/3/2/11;
+  }
+  #hero #div2 .logo {
+    display: none;
+  }
+  #hero #div2 .nav-links {
+    width: 100%;
+    justify-content: space-evenly;
   }
   #hero #div5 {
     grid-area: 4/3/10/11;
@@ -298,15 +350,17 @@ body {
     grid-area: 1/3/2/11;
   }
   #hero #div5 {
-    grid-area: 4/3/10/11;
-  }
-  #hero #div5 h1 {
-    flex-direction: column !important;
+    grid-area: 3/3/10/11;
   }
   #hero #div3 {
     grid-area: 12/1/13/3;
   }
   #hero #div4 {
     grid-area: 11/12/13/13;
+  }
+  #hero #div4 h1 {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
   }
 }/*# sourceMappingURL=style.css.map */
