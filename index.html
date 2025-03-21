@@ -28,7 +28,6 @@
 
 
 
-
     <!-- Hero Section -->
     <section id="hero">
         <div class="container-fluid">
@@ -64,9 +63,11 @@
                     <h1>XIREN.</h1>
                 </div>
                 <div id="div4">
-                    <h1>
-                        SCROLL
-                    </h1>
+                    <div class="fade">
+                        <h1 class="btn-shine">
+                            SCROLL
+                        </h1>
+                    </div>
                 </div>
                 <div id="div5">
                     <h1>
@@ -220,11 +221,11 @@
 
 
         const navbar = document.querySelector('nav');
-const hamburger = document.querySelector('.hamburger');
+        const hamburger = document.querySelector('.hamburger');
 
-hamburger.addEventListener('click', () => {
-  navbar.classList.toggle('active');
-});
+        hamburger.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
 
     </script>
 
