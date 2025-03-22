@@ -75,6 +75,37 @@ body {
     background-color: $primary-color;
 }
 
+*::-webkit-scrollbar {
+    height: 3px;
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 20px;
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-track:hover {
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-track:active {
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #000000;
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background-color: #000000;
+}
+
 
 // Layout
 .container-fluid {
@@ -107,27 +138,13 @@ body {
         background-attachment: fixed;
     }
 
-    // #div1 {
-    //     animation: backgroundSlide 5s infinite alternate ease-in-out;
-    // }
-
-    // @keyframes backgroundSlide {
-    //     0% {
-    //         background-image: url('/image/14310340.jpg');
-    //     }
-
-    //     100% {
-    //         background-image: url('/image/15405592.png');
-    //     }
-    // }
-
     #div2 {
         grid-area: 1 / 3 / 2 / 11;
         background-color: $primary-color;
         border-radius: 2px 2px 50px 50px;
         margin-left: 30px;
         transform: translateY(-100px);
-        animation: swipeIns 1.5s ease-out forwards;
+        animation: swipeIns 1.5s ease-out forwards 3s;
 
         @keyframes swipeIns {
             0% {
@@ -156,7 +173,7 @@ body {
             font-weight: normal;
             -webkit-text-stroke: 2px $text-color;
             opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards 1.5s;
+            animation: fadeIn 1s ease-in-out forwards 3.5s;
         }
     }
 
@@ -167,8 +184,8 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        transform: translateX(100px);
-        animation: swipeIn 1.5s ease-out forwards;
+        transform: translateX(150px);
+        animation: swipeIn 1.5s ease-out forwards 3s;
 
         h1 {
             font-family: 'Roboto', sans-serif;
@@ -194,7 +211,7 @@ body {
 
         .fade {
             opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards 1.5s;
+            animation: fadeIn 1s ease-in-out forwards 3.5s;
         }
 
         @keyframes shine {
@@ -237,15 +254,43 @@ body {
             color: $text-color;
             font-size: clamp(8rem, 10vw, 12rem);
             text-align: center;
-            line-height: .8;
+            line-height: 0.8;
             letter-spacing: 0.1px;
 
             span {
                 text-align: center;
+                display: inline-block;
+                opacity: 0;
+                transform: translateY(50px); // Start lower for a fade-up effect
+                animation: fadeInUp 1s ease-in-out forwards;
+            }
+
+            span:nth-child(1) {
+                animation-delay: 0.8s;
+            }
+
+            span:nth-child(2) {
+                animation-delay: 0.8s;
+            }
+
+            span:nth-child(3) {
+                animation-delay: 1.4s;
             }
         }
-
     }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px); // Starting 50px below
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0); // Ending at normal position
+        }
+    }
+
 
     #div6 {
         grid-area: 1 / 1 / 2 / 4;
@@ -264,7 +309,7 @@ body {
             align-items: center;
             height: 100%;
             opacity: 0;
-            animation: fadeIn 1s ease-in-out forwards 1.5s;
+            animation: fadeIn 1s ease-in-out forwards 3.5s;
 
             @keyframes fadeIn {
                 0% {
@@ -283,6 +328,7 @@ body {
             font-weight: bold;
             color: $text-color;
             text-decoration: none;
+            transition: all 0.3s ease;
         }
 
         // Navigation Links
@@ -290,7 +336,6 @@ body {
             list-style: none;
             display: flex;
             gap: 2rem;
-            transition: all 0.3s ease;
 
 
             li a {
@@ -358,10 +403,22 @@ body {
                 grid-area: 1 / 11 / 2 / 13 !important;
                 border-radius: 0 0 0 30px !important;
                 margin-left: 0;
+                transform: translateX(150px);
+                animation: swipeInss 1.5s ease-out forwards 3s;
 
                 .nav-links {
                     width: 100%;
                     justify-content: center;
+                }
+
+                @keyframes swipeInss {
+                    0% {
+                        transform: translateX(100px);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
                 }
             }
 
@@ -373,7 +430,8 @@ body {
                 border-radius: 35px 35px 0 0 !important;
                 grid-area: 12 / 3 / 13 / 11 !important;
                 align-items: flex-start;
-                animation: swipeIns 2s ease-out forwards !important;
+                transform: translateY(100px);
+                animation: swipeIns 1s ease-out forwards 3s !important;
 
                 h1 {
                     margin-top: 10px;
@@ -396,7 +454,7 @@ body {
 
                 .fade {
                     opacity: 0;
-                    animation: fadeIn 1s ease-in-out forwards 1.5s;
+                    animation: fadeIn 1s ease-in-out forwards 3.5s;
                 }
 
                 @keyframes fadeIn {
@@ -445,6 +503,9 @@ body {
                 justify-content: flex-start;
                 align-items: center;
                 padding: 10px 10px;
+                opacity: 0;
+                animation: fadeIn 1s ease-in-out forwards 3.5s;
+
             }
 
             header {
