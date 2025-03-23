@@ -14,17 +14,15 @@
     <!-- Hero Section -->
     <section id="hero">
         <div class="container-fluid">
-            <div id="cssportal-grid">
-                <div id="div1"></div>
-                <div id="div2">
+            <div id="hero-section">
+                <div id="hero-bg">
+                </div>
+                <div id="hero-nav">
                     <header>
                         <nav>
-                            <!-- Logo Section -->
                             <div class="logo">
                                 <a href="#"><img src="/image/logo-w.png" alt="Logo" width="50"></a>
                             </div>
-
-                            <!-- Navigation Links -->
                             <ul class="nav-links">
                                 <li><a href="#">Home</a></li>
                                 <li><a href="#">About</a></li>
@@ -32,8 +30,6 @@
                                 <li><a href="#">Portfolio</a></li>
                                 <li><a href="#">Contact</a></li>
                             </ul>
-
-                            <!-- Hamburger Menu for Mobile -->
                             <button class="hamburger" aria-label="Toggle Navigation">
                                 <span></span>
                                 <span></span>
@@ -42,24 +38,24 @@
                         </nav>
                     </header>
                 </div>
-                <div id="div3">
+                <div id="hero-name">
                     <h1>XIREN.</h1>
                 </div>
-                <div id="div4">
+                <div id="hero-scroll">
                     <div class="fade">
                         <h1 class="btn-shine">
                             SCROLL
                         </h1>
                     </div>
                 </div>
-                <div id="div5">
+                <div id="hero-main-text">
                     <h1>
                         <span>Front</span>
                         <span> End</span>
                         <span>Developer</span>
                     </h1>
                 </div>
-                <div id="div6">
+                <div id="hero-logo">
                     <a href="#"><img src="/image/logo-w.png" alt="Logo" width="50"></a>
                 </div>
             </div>
@@ -72,7 +68,19 @@
     <!-- About Section -->
     <section id="about">
         <div class="container-fluid">
-
+            <div id="cssportal-grid">
+                <div id="div1">div1</div>
+                <div id="div2">div2</div>
+                <div id="div3">div3</div>
+                <div id="div4">div4</div>
+                <div id="div5">
+                    <div class="gradiant"></div>
+                    <div class="about-me-name">
+                        <h1>MYKO XIREN</h1>
+                        <P>A Website Developer by Profession and Website Designer by Passion.</P>
+                    </div>
+                </div>
+            </div>            
         </div>
     </section>
 
@@ -184,7 +192,7 @@
 
     <script>
 
-        const heading = document.querySelector('#div5 h1');
+        const heading = document.querySelector('#hero-main-text h1');
         const mediaQuery = window.matchMedia('(max-width: 767px)');
 
         function updateHeading(e) {

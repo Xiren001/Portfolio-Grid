@@ -73,6 +73,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.5;
     background-color: $primary-color;
+    position: relative;
 }
 
 *::-webkit-scrollbar {
@@ -114,12 +115,14 @@ body {
     height: 100%;
 }
 
+
+
 // Hero Section
 #hero {
     height: 100dvh;
     overflow: hidden;
 
-    #cssportal-grid {
+    #hero-section {
         display: grid;
         grid-template-rows: repeat(12, 1fr);
         grid-template-columns: repeat(12, 1fr);
@@ -128,7 +131,7 @@ body {
         height: 100%;
     }
 
-    #div1 {
+    #hero-bg {
         grid-area: 1 / 1 / 13 / 13;
         border-radius: 50px;
         background-image: url('/image/14310340.jpg');
@@ -136,13 +139,14 @@ body {
         background-size: cover;
         background-position: center;
         background-attachment: fixed;
+        background-repeat: no-repeat;
     }
 
-    #div2 {
+    #hero-nav {
         grid-area: 1 / 3 / 2 / 11;
         background-color: $primary-color;
         border-radius: 2px 2px 50px 50px;
-        margin-left: 30px;
+
         transform: translateY(-100px);
         animation: swipeIns 1.5s ease-out forwards 3s;
 
@@ -158,7 +162,7 @@ body {
     }
 
 
-    #div3 {
+    #hero-name {
         grid-area: 12 / 1 / 13 / 3;
         border-radius: 0 50px 0 0;
         display: flex;
@@ -166,7 +170,8 @@ body {
         align-items: center;
 
         h1 {
-            font-family: 'MyCustomFont', sans-serif;
+            margin-left: 8px;
+            font-family: 'Roboto', sans-serif;
             color: $text-color;
             text-align: center;
             letter-spacing: 0.2px;
@@ -177,7 +182,7 @@ body {
         }
     }
 
-    #div4 {
+    #hero-scroll {
         grid-area: 12/12/13/13;
         background-color: $primary-color;
         border-radius: 50px 0 0 0;
@@ -193,7 +198,7 @@ body {
             color: $text-color;
             text-align: center;
             letter-spacing: 0.1px;
-            font-size: clamp(1rem, 1.2vw, 6rem);
+            font-size: clamp(1.2rem, 1.2vw, 6rem);
         }
 
         .btn-shine {
@@ -235,14 +240,14 @@ body {
         }
     }
 
-    #div5 {
+    #hero-main-text {
         grid-area: 3 / 3 / 9 / 11;
         display: flex;
         justify-content: center;
         align-items: center;
 
         h1 {
-            margin-left: 55px;
+            margin-left: 25px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -292,7 +297,7 @@ body {
     }
 
 
-    #div6 {
+    #hero-logo {
         grid-area: 1 / 1 / 2 / 4;
         display: none;
         transition: all 0.3s ease;
@@ -371,62 +376,228 @@ body {
             }
         }
     }
+}
 
-    // Responsive Adjustments
+// End hero section
 
-    // Mobile (Small screens)
-    @media (max-width: 576px) {
-        #div2 {
+// About Section
+#about {
+    height: 80dvh;
+    overflow: hidden;
+
+    #cssportal-grid {
+        display: grid;
+        grid-template-rows: repeat(6, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 25px 24px;
+        width: 100%;
+        height: 100%;
+    }
+
+    #div1 {
+        grid-area: 1 / 1 / 4 / 4;
+        background-color: rgba(31, 53, 65, 0.5);
+        border-radius: 50px;
+    }
+
+    #div2 {
+        grid-area: 1 / 4 / 4 / 7;
+        background-color: rgba(106, 67, 151, 0.5);
+        border-radius: 50px;
+    }
+
+    #div3 {
+        grid-area: 4 / 1 / 7 / 4;
+        background-color: rgba(184, 50, 163, 0.5);
+        border-radius: 50px;
+    }
+
+    #div4 {
+        grid-area: 4 / 4 / 7 / 7;
+        background-color: rgba(24, 111, 236, 0.5);
+        border-radius: 50px;
+    }
+
+    #div5 {
+        grid-area: 1 / 7 / 7 / 13;
+        background-image: url('/image/15405592.png');
+        // background-image: url('/image/15405592.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 50px;
+        border: 1px solid rgba(110, 110, 110, 0.786);
+
+        .gradiant {
+            position: relative;
+            border-radius: 50px;
+            background: rgb(10, 9, 8);
+            background: -moz-linear-gradient(0deg, rgba(10, 9, 8, 1) 7%, rgba(255, 255, 255, 0) 57%);
+            background: -webkit-linear-gradient(0deg, rgba(10, 9, 8, 1) 7%, rgba(255, 255, 255, 0) 57%);
+            background: linear-gradient(0deg, rgba(10, 9, 8, 1) 7%, rgba(255, 255, 255, 0) 57%);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0908", endColorstr="#ffffff", GradientType=1);
+            width: 100%;
+            height: 100%;
+        }
+
+        .about-me-name {
+            
+        }
+    }
+}
+
+// End About Section
+
+
+
+
+
+
+
+
+
+// Responsive Adjustments
+// Mobile (Small screens)
+@media (max-width: 576px) {
+
+    // Hero Section
+    #hero {
+        #hero-nav {
             grid-area: 1 / 2 / 2 / 12;
         }
 
-        #div5 {
+        #hero-main-text {
             grid-area: 3 / 2 / 10 / 12;
         }
 
-        #div3,
-        #div4 {
+        #hero-name,
+        #hero-scroll {
             grid-area: auto;
             width: 100%;
             height: 100px;
         }
     }
 
-    // Tablet (Medium screens)
-    @media (max-width: 767px) {
+    // End hero section
 
-        #cssportal-grid {
+
+}
+
+// Tablet (Medium screens)
+@media (max-width: 767px) {
+    #hero {
+
+        // Hero Section
+        #hero-section {
             grid-template-rows: repeat(11, 1fr) 50px !important;
 
+            #hero-bg {
+                background-attachment: scroll;
+            }
 
-            #div2 {
+            #hero-nav {
                 grid-area: 1 / 11 / 2 / 13 !important;
-                border-radius: 0 0 0 30px !important;
+                border-radius: 20px 0 0 20px !important;
                 margin-left: 0;
                 transform: translateX(150px);
                 animation: swipeInss 1.5s ease-out forwards 3s;
+                z-index: 999;
+                position: fixed;
+                top: 10px;
+                right: 20px;
+                width: 50px;
+                height: 80px;
 
-                .nav-links {
-                    width: 100%;
+                header {
+                    display: flex;
                     justify-content: center;
-                }
+                    align-items: center;
 
-                @keyframes swipeInss {
-                    0% {
-                        transform: translateX(100px);
+                    .nav-links {
+                        position: fixed !important;
+                        top: -30px;
+                        right: -20px;
+                        width: 100vw !important;
+                        height: 110vh;
+                        background-color: $primary-color;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 998;
+                        transition: all 0.5s ease;
+
                     }
 
-                    100% {
-                        transform: translateX(0);
+                    @keyframes swipeInss {
+                        0% {
+                            transform: translateX(100px);
+                        }
+
+                        100% {
+                            transform: translateX(0);
+                        }
                     }
+
+                    .hamburger {
+                        display: flex !important;
+                        z-index: 999;
+                    }
+
+                    @keyframes spreadIn {
+                        0% {
+                            clip-path: circle(0% at 100% 0%);
+                            opacity: 0;
+                        }
+
+                        100% {
+                            clip-path: circle(150% at 100% 0%);
+                            opacity: 1;
+                        }
+                    }
+
+                    @keyframes spreadOut {
+                        0% {
+                            clip-path: circle(150% at 100% 0%);
+                            opacity: 1;
+                        }
+
+                        100% {
+                            clip-path: circle(0% at 100% 0%);
+                            opacity: 0;
+                        }
+                    }
+
+                    nav.active .nav-links {
+                        visibility: visible;
+                        animation: spreadIn .8s ease-in-out forwards;
+                    }
+
+                    nav:not(.active) .nav-links {
+                        animation: spreadOut .5s ease-in-out forwards;
+                    }
+
+
+                    // Animation for Hamburger Menu
+                    nav.active .hamburger span:nth-child(1) {
+                        transform: translateY(8px) rotate(46deg);
+                    }
+
+                    nav.active .hamburger span:nth-child(2) {
+                        opacity: 0;
+                    }
+
+                    nav.active .hamburger span:nth-child(3) {
+                        transform: translateY(-8px) rotate(-46deg);
+                    }
+
                 }
             }
 
-            #div3 {
+            #hero-name {
                 grid-area: 11 / 6 / 11 / 8 !important;
             }
 
-            #div4 {
+            #hero-scroll {
                 border-radius: 35px 35px 0 0 !important;
                 grid-area: 12 / 3 / 13 / 11 !important;
                 align-items: flex-start;
@@ -446,7 +617,7 @@ body {
                     background-position: 0;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
-                    animation: shines 6s infinite linear;
+                    animation: shiness 6s infinite linear;
                     animation-fill-mode: forwards;
                     -webkit-text-size-adjust: none;
                     white-space: nowrap;
@@ -467,7 +638,7 @@ body {
                     }
                 }
 
-                @keyframes shines {
+                @keyframes shiness {
                     0% {
                         background-position: 0;
                     }
@@ -488,109 +659,89 @@ body {
                 }
             }
 
-            #div5 {
+            #hero-main-text {
                 grid-area: 4 / 2 / 10 / 12;
 
                 h1 {
                     margin-left: 30px;
                     letter-spacing: 1px !important;
                     font-size: clamp(10rem, 10vw, 12rem) !important;
+
+                    span:nth-child(1) {
+                        animation-delay: 0.11s;
+                    }
+
+                    span:nth-child(2) {
+                        animation-delay: 0.8s;
+                    }
+
+                    span:nth-child(3) {
+                        animation-delay: 1.4s;
+                    }
                 }
             }
 
-            #div6 {
+            #hero-logo {
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
-                padding: 10px 10px;
+                padding: 15px 15px;
                 opacity: 0;
                 animation: fadeIn 1s ease-in-out forwards 3.5s;
-
             }
-
-            header {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .hamburger {
-                display: flex !important;
-                z-index: 999;
-            }
-
-            @keyframes spreadIn {
-                0% {
-                    clip-path: circle(0% at 100% 0%);
-                    opacity: 0;
-                }
-
-                100% {
-                    clip-path: circle(150% at 100% 0%);
-                    opacity: 1;
-                }
-            }
-
-            @keyframes spreadOut {
-                0% {
-                    clip-path: circle(150% at 100% 0%);
-                    opacity: 1;
-                }
-
-                100% {
-                    clip-path: circle(0% at 100% 0%);
-                    opacity: 0;
-                }
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 0;
-                right: 0;
-                width: 100vw;
-                height: 100vh;
-                background-color: rgba(10, 9, 8, 0.95);
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 2rem;
-                visibility: hidden;
-                opacity: 0;
-                clip-path: circle(0% at 100% 0%);
-                z-index: 998;
-            }
-
-            nav.active .nav-links {
-                visibility: visible;
-                animation: spreadIn .8s ease-in-out forwards;
-            }
-
-            nav:not(.active) .nav-links {
-                animation: spreadOut .5s ease-in-out forwards;
-            }
-
-
-            // Animation for Hamburger Menu
-            nav.active .hamburger span:nth-child(1) {
-                transform: translateY(8px) rotate(46deg);
-            }
-
-            nav.active .hamburger span:nth-child(2) {
-                opacity: 0;
-            }
-
-            nav.active .hamburger span:nth-child(3) {
-                transform: translateY(-8px) rotate(-46deg);
-            }
-
         }
     }
 
+    // End hero section
 
-    // Small Laptops
-    @media (max-width: 991px) {
+    // About Section
+
+    #about {
+
+        #cssportal-grid {
+            display: grid;
+            grid-template-rows: repeat(12, 1fr) !important;
+            grid-template-columns: repeat(6, 1fr) !important;
+            gap: 25px 24px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #div1 {
+            grid-area: 1 / 1 / 3 / 7 !important;
+            border-radius: 25px;
+        }
+
         #div2 {
+            grid-area: 3 / 1 / 5 / 7 !important;
+            border-radius: 25px;
+        }
+
+        #div3 {
+            grid-area: 5 / 1 / 7 / 7 !important;
+            border-radius: 25px;
+        }
+
+        #div4 {
+            grid-area: 7 / 1 / 9 / 7 !important;
+            border-radius: 25px;
+        }
+
+        #div5 {
+            grid-area: 9 / 1 / 13 / 7 !important;
+        }
+    }
+
+    // End About Section
+}
+
+
+// Small Laptops
+@media (max-width: 991px) {
+
+    // Hero Section
+    #hero {
+        #hero-nav {
             grid-area: 1 / 3 / 2 / 11;
 
             .logo {
@@ -603,36 +754,43 @@ body {
             }
         }
 
-        #div5 {
+        #hero-main-text {
             grid-area: 4 / 3 / 10 / 11;
 
         }
 
-        #div3 {
+        #hero-name {
             grid-area: 12 / 1 / 13 / 4;
         }
 
-        #div4 {
+        #hero-scroll {
             grid-area: 11 / 11 / 13 / 13;
         }
     }
 
-    // Large Desktops
-    @media (max-width: 1200px) {
-        #div2 {
+    // End hero section
+}
+
+// Large Desktops
+@media (max-width: 1200px) {
+
+    // Hero Section
+    #hero {
+
+        #hero-nav {
             grid-area: 1 / 3 / 2 / 11;
         }
 
-        #div5 {
+        #hero-main-text {
             grid-area: 3 / 3 / 10 / 11;
         }
 
-        #div3 {
+        #hero-name {
             grid-area: 12 / 1 / 13 / 3;
         }
 
-        #div4 {
-            grid-area: 11 / 12 / 13 / 13;
+        #hero-scroll {
+            grid-area: 11 / 12 / 13 / 13 !important;
 
             h1 {
                 writing-mode: vertical-rl;
@@ -647,13 +805,13 @@ body {
                 background-position: 0 100%;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
-                animation: shine 4s infinite linear;
+                animation: shines 4s infinite linear;
                 animation-fill-mode: forwards;
                 -webkit-text-size-adjust: none;
                 white-space: nowrap;
             }
 
-            @keyframes shine {
+            @keyframes shines {
                 0% {
                     background-position: 0 100%;
                 }
@@ -664,4 +822,47 @@ body {
             }
         }
     }
+
+    // End hero section
+
+    // About Section
+
+    #about {
+        #cssportal-grid {
+            display: grid;
+            grid-template-rows: repeat(8, 1fr);
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px 24px;
+            width: 100%;
+            height: 100%;
+        }
+
+        #div1 {
+            grid-area: 1 / 1 / 3 / 3;
+
+        }
+
+        #div2 {
+            grid-area: 1 / 3 / 3 / 5;
+
+        }
+
+        #div3 {
+            grid-area: 3 / 1 / 5 / 3;
+
+        }
+
+        #div4 {
+            grid-area: 3 / 3 / 5 / 5;
+
+        }
+
+        #div5 {
+            grid-area: 5 / 1 / 9 / 5;
+
+        }
+    }
+
+    // End About Section
+
 }
