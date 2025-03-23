@@ -7,6 +7,7 @@
     <title>Myko Xiren Dungca | Web Developer</title>
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -16,6 +17,7 @@
         <div class="container-fluid">
             <div id="hero-section">
                 <div id="hero-bg">
+                    <div class="gradiant"></div>
                 </div>
                 <div id="hero-nav">
                     <header>
@@ -69,18 +71,18 @@
     <section id="about">
         <div class="container-fluid">
             <div id="cssportal-grid">
-                <div id="div1">div1</div>
-                <div id="div2">div2</div>
-                <div id="div3">div3</div>
-                <div id="div4">div4</div>
+                <div id="div1" class="about-div">div1</div>
+                <div id="div2" class="about-div">div2</div>
+                <div id="div3" class="about-div">div3</div>
+                <div id="div4" class="about-div">div4</div>
                 <div id="div5">
-                    <div class="gradiant"></div>
-                    <div class="about-me-name">
+                    <div class="about-gradiant"></div>
+                    <div class="about-me-name" data-aos="fade-up">
                         <h1>MYKO XIREN</h1>
-                        <P>A Website Developer by Profession and Website Designer by Passion.</P>
+                        <h3>A Website Developer by Profession and Website Designer by Passion.</h3>
                     </div>
                 </div>
-            </div>            
+            </div>
         </div>
     </section>
 
@@ -189,9 +191,11 @@
 
 
 
-
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
+        AOS.init();
 
+        // Hero Section text
         const heading = document.querySelector('#hero-main-text h1');
         const mediaQuery = window.matchMedia('(max-width: 767px)');
 
@@ -202,17 +206,31 @@
                 heading.innerHTML = '<span>Front</span> <span>end</span> <span>Developer</span>';
             }
         }
-
         updateHeading(mediaQuery);
         mediaQuery.addEventListener('change', updateHeading);
+        // Hero Section text end
 
-
+        // navbar
         const navbar = document.querySelector('nav');
         const hamburger = document.querySelector('.hamburger');
 
         hamburger.addEventListener('click', () => {
             navbar.classList.toggle('active');
         });
+        // navbar end
+
+        // hero gradient
+        window.addEventListener('scroll', function () {
+            const heroBg = document.getElementById('hero-bg');
+            const gradient = document.querySelector('.gradiant');
+            const scrollY = window.scrollY;
+            const maxScroll = window.innerHeight * .5;
+
+            // Calculate opacity (0 to 1)
+            let opacity = Math.min(scrollY / maxScroll, 1);
+            gradient.style.setProperty('--opacity', opacity);
+        });
+        // hero gradient end
 
     </script>
 

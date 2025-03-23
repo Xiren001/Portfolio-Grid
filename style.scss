@@ -18,20 +18,6 @@
 }
 
 @font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/Reospec.woff2') format('woff2');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MyCustomFont';
-    src: url('/fonts/Reospec.woff2') format('woff2');
-    font-weight: 400;
-    font-style: italic;
-}
-
-@font-face {
     font-family: 'Roboto';
     src: url('/fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;
@@ -45,9 +31,25 @@
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Bold.otf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMontreal';
+    src: url('/fonts/NeueMontreal-Regular.otf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
 $primary-color: #0A0908;
 $secondary-color: #22333B;
 $text-color: #F2F4F3;
+$padding: 20px;
 
 // Global Styles
 h1,
@@ -70,7 +72,7 @@ html,
 body {
     height: 100%;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'NeueMontreal', sans-serif;
     line-height: 1.5;
     background-color: $primary-color;
     position: relative;
@@ -140,6 +142,20 @@ body {
         background-position: center;
         background-attachment: fixed;
         background-repeat: no-repeat;
+        overflow: hidden;
+        position: relative;
+
+        .gradiant {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            background: linear-gradient(0deg, rgba(10, 9, 8, var(--opacity, 0)) 10%, rgba(255, 255, 255, 0) 57%);
+            transition: opacity 0.2s ease;
+            z-index: 2;
+        }
     }
 
     #hero-nav {
@@ -171,10 +187,10 @@ body {
 
         h1 {
             margin-left: 8px;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'NeueMontreal', sans-serif;
             color: $text-color;
             text-align: center;
-            letter-spacing: 0.2px;
+            letter-spacing: 1px;
             font-weight: normal;
             -webkit-text-stroke: 2px $text-color;
             opacity: 0;
@@ -193,7 +209,7 @@ body {
         animation: swipeIn 1.5s ease-out forwards 3s;
 
         h1 {
-            font-family: 'Roboto', sans-serif;
+            font-family: 'NeueMontreal', sans-serif;
             font-weight: 700;
             color: $text-color;
             text-align: center;
@@ -394,56 +410,80 @@ body {
         height: 100%;
     }
 
+    .about-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
     #div1 {
         grid-area: 1 / 1 / 4 / 4;
-        background-color: rgba(31, 53, 65, 0.5);
         border-radius: 50px;
+        border: 1px solid #6e6e6f;
     }
 
     #div2 {
         grid-area: 1 / 4 / 4 / 7;
-        background-color: rgba(106, 67, 151, 0.5);
         border-radius: 50px;
+        border: 1px solid #6e6e6f;
     }
 
     #div3 {
         grid-area: 4 / 1 / 7 / 4;
-        background-color: rgba(184, 50, 163, 0.5);
         border-radius: 50px;
+        border: 1px solid #6e6e6f;
     }
 
     #div4 {
         grid-area: 4 / 4 / 7 / 7;
-        background-color: rgba(24, 111, 236, 0.5);
         border-radius: 50px;
+        border: 1px solid #6e6e6f;
     }
 
     #div5 {
         grid-area: 1 / 7 / 7 / 13;
         background-image: url('/image/15405592.png');
-        // background-image: url('/image/15405592.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         border-radius: 50px;
-        border: 1px solid rgba(110, 110, 110, 0.786);
+        border: 1px solid #6e6e6f;
+        position: relative;
+        padding: $padding;
+        display: flex;
+        align-items: end;
+        justify-content: flex-start;
+    }
 
-        .gradiant {
-            position: relative;
-            border-radius: 50px;
-            background: rgb(10, 9, 8);
-            background: -moz-linear-gradient(0deg, rgba(10, 9, 8, 1) 7%, rgba(255, 255, 255, 0) 57%);
-            background: -webkit-linear-gradient(0deg, rgba(10, 9, 8, 1) 7%, rgba(255, 255, 255, 0) 57%);
-            background: linear-gradient(0deg, rgba(10, 9, 8, 1) 7%, rgba(255, 255, 255, 0) 57%);
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0908", endColorstr="#ffffff", GradientType=1);
-            width: 100%;
-            height: 100%;
+    .about-gradiant {
+        position: absolute;
+        inset: 0;
+        border-radius: 50px;
+        background: linear-gradient(0deg, rgba(10, 9, 8, 1) 15%, rgba(255, 255, 255, 0) 57%);
+        pointer-events: none;
+    }
+
+    .about-me-name {
+        position: relative;
+        margin-bottom: 50px;
+        width: 100%;
+        z-index: 1;
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 10rem);
+            line-height: 1.2;
+            letter-spacing: .01px;
         }
 
-        .about-me-name {
-            
+        h3 {
+            font-size: clamp(.8rem, 1.1vw, 5rem);
+            line-height: 1;
+            letter-spacing: 2px;
+            font-weight: 400;
         }
     }
+
 }
 
 // End About Section
@@ -698,11 +738,13 @@ body {
 
     #about {
 
+        height: 110vh;
+
         #cssportal-grid {
             display: grid;
             grid-template-rows: repeat(12, 1fr) !important;
             grid-template-columns: repeat(6, 1fr) !important;
-            gap: 25px 24px;
+            gap: 20px !important;
             width: 100%;
             height: 100%;
         }
@@ -769,6 +811,7 @@ body {
     }
 
     // End hero section
+
 }
 
 // Large Desktops
@@ -860,6 +903,9 @@ body {
         #div5 {
             grid-area: 5 / 1 / 9 / 5;
 
+            .about-me-name {
+                margin-bottom: 20px;
+            }
         }
     }
 

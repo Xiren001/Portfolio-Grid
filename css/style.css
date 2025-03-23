@@ -16,18 +16,6 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "MyCustomFont";
-  src: url("/fonts/Reospec.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
-  font-family: "MyCustomFont";
-  src: url("/fonts/Reospec.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-}
-@font-face {
   font-family: "Roboto";
   src: url("/fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -37,6 +25,18 @@
   font-family: "Roboto";
   src: url("/fonts/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Bold.otf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "NeueMontreal";
+  src: url("/fonts/NeueMontreal-Regular.otf") format("truetype");
+  font-weight: 400;
   font-style: normal;
 }
 h1,
@@ -59,7 +59,7 @@ html,
 body {
   height: 100%;
   width: 100%;
-  font-family: "Roboto", sans-serif;
+  font-family: "NeueMontreal", sans-serif;
   line-height: 1.5;
   background-color: #0A0908;
   position: relative;
@@ -122,6 +122,19 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+}
+#hero #hero-bg .gradiant {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(0deg, rgba(10, 9, 8, var(--opacity, 0)) 10%, rgba(255, 255, 255, 0) 57%);
+  transition: opacity 0.2s ease;
+  z-index: 2;
 }
 #hero #hero-nav {
   grid-area: 1/3/2/11;
@@ -147,10 +160,10 @@ body {
 }
 #hero #hero-name h1 {
   margin-left: 8px;
-  font-family: "Roboto", sans-serif;
+  font-family: "NeueMontreal", sans-serif;
   color: #F2F4F3;
   text-align: center;
-  letter-spacing: 0.2px;
+  letter-spacing: 1px;
   font-weight: normal;
   -webkit-text-stroke: 2px #F2F4F3;
   opacity: 0;
@@ -167,7 +180,7 @@ body {
   animation: swipeIn 1.5s ease-out forwards 3s;
 }
 #hero #hero-scroll h1 {
-  font-family: "Roboto", sans-serif;
+  font-family: "NeueMontreal", sans-serif;
   font-weight: 700;
   color: #F2F4F3;
   text-align: center;
@@ -332,25 +345,30 @@ body {
   width: 100%;
   height: 100%;
 }
+#about .about-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #about #div1 {
   grid-area: 1/1/4/4;
-  background-color: rgba(31, 53, 65, 0.5);
   border-radius: 50px;
+  border: 1px solid #6e6e6f;
 }
 #about #div2 {
   grid-area: 1/4/4/7;
-  background-color: rgba(106, 67, 151, 0.5);
   border-radius: 50px;
+  border: 1px solid #6e6e6f;
 }
 #about #div3 {
   grid-area: 4/1/7/4;
-  background-color: rgba(184, 50, 163, 0.5);
   border-radius: 50px;
+  border: 1px solid #6e6e6f;
 }
 #about #div4 {
   grid-area: 4/4/7/7;
-  background-color: rgba(24, 111, 236, 0.5);
   border-radius: 50px;
+  border: 1px solid #6e6e6f;
 }
 #about #div5 {
   grid-area: 1/7/7/13;
@@ -359,19 +377,38 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border-radius: 50px;
-  border: 1px solid rgba(110, 110, 110, 0.786);
-}
-#about #div5 .gradiant {
+  border: 1px solid #6e6e6f;
   position: relative;
-  border-radius: 50px;
-  background: rgb(10, 9, 8);
-  background: -moz-linear-gradient(0deg, rgb(10, 9, 8) 7%, rgba(255, 255, 255, 0) 57%);
-  background: -webkit-linear-gradient(0deg, rgb(10, 9, 8) 7%, rgba(255, 255, 255, 0) 57%);
-  background: linear-gradient(0deg, rgb(10, 9, 8) 7%, rgba(255, 255, 255, 0) 57%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0a0908", endColorstr="#ffffff", GradientType=1);
-  width: 100%;
-  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-items: end;
+  justify-content: flex-start;
 }
+#about .about-gradiant {
+  position: absolute;
+  inset: 0;
+  border-radius: 50px;
+  background: linear-gradient(0deg, rgb(10, 9, 8) 15%, rgba(255, 255, 255, 0) 57%);
+  pointer-events: none;
+}
+#about .about-me-name {
+  position: relative;
+  margin-bottom: 50px;
+  width: 100%;
+  z-index: 1;
+}
+#about .about-me-name h1 {
+  font-size: clamp(2rem, 6vw, 10rem);
+  line-height: 1.2;
+  letter-spacing: 0.01px;
+}
+#about .about-me-name h3 {
+  font-size: clamp(0.8rem, 1.1vw, 5rem);
+  line-height: 1;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
 @media (max-width: 576px) {
   #hero #hero-nav {
     grid-area: 1/2/2/12;
@@ -552,11 +589,14 @@ body {
     opacity: 0;
     animation: fadeIn 1s ease-in-out forwards 3.5s;
   }
+  #about {
+    height: 110vh;
+  }
   #about #cssportal-grid {
     display: grid;
     grid-template-rows: repeat(12, 1fr) !important;
     grid-template-columns: repeat(6, 1fr) !important;
-    gap: 25px 24px;
+    gap: 20px !important;
     width: 100%;
     height: 100%;
   }
@@ -661,5 +701,8 @@ body {
   }
   #about #div5 {
     grid-area: 5/1/9/5;
+  }
+  #about #div5 .about-me-name {
+    margin-bottom: 20px;
   }
 }/*# sourceMappingURL=style.css.map */
