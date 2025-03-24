@@ -414,6 +414,16 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+
+        .about-div-content {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 5px 50px;
+        }
     }
 
 
@@ -476,11 +486,12 @@ body {
             letter-spacing: .01px;
         }
 
-        h3 {
-            font-size: clamp(.8rem, 1.1vw, 5rem);
+        p {
+            font-size: clamp(.8rem, 1vw, 5rem);
             line-height: 1;
             letter-spacing: 2px;
-            font-weight: 400;
+            font-weight: 200;
+            font-style: normal;
         }
     }
 

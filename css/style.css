@@ -349,6 +349,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+#about .about-div .about-div-content {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 5px 50px;
 }
 #about #div1 {
   grid-area: 1/1/4/4;
@@ -402,11 +411,12 @@ body {
   line-height: 1.2;
   letter-spacing: 0.01px;
 }
-#about .about-me-name h3 {
-  font-size: clamp(0.8rem, 1.1vw, 5rem);
+#about .about-me-name p {
+  font-size: clamp(0.8rem, 1vw, 5rem);
   line-height: 1;
   letter-spacing: 2px;
-  font-weight: 400;
+  font-weight: 200;
+  font-style: normal;
 }
 
 @media (max-width: 576px) {
