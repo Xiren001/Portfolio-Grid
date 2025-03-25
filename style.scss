@@ -476,7 +476,7 @@ body {
 
     .about-me-name {
         position: relative;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         width: 100%;
         z-index: 1;
 
@@ -889,6 +889,28 @@ body {
             gap: 25px 24px;
             width: 100%;
             height: 100%;
+        }
+
+        .about-div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+
+            .about-div-content {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                padding: 5px 15px;
+
+                svg {
+                    width: 50px;
+                    height: 50px;
+                    display: none;
+                }
+            }
         }
 
         #div1 {
