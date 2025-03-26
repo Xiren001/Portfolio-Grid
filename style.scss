@@ -5,9 +5,9 @@
     --font-size-h3: clamp(20px, 4vw, 40px);
     --font-size-h4: clamp(18px, 3.5vw, 38px);
     --font-size-h5: clamp(16px, 3vw, 36px);
-    --font-size-h6: clamp(14px, 2.5vw, 34px);
-    --font-size-p: clamp(14px, 2vw, 24px);
-    --font-size-small: clamp(12px, 1.5vw, 22px);
+    --font-size-h6: clamp(14px, 2vw, 34px);
+    --font-size-p: clamp(14px, 1vw, 24px);
+    --font-size-small: clamp(12px, .8vw, 22px);
 }
 
 @font-face {
@@ -76,6 +76,10 @@ body {
     line-height: 1.5;
     background-color: $primary-color;
     position: relative;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 *::-webkit-scrollbar {
@@ -401,11 +405,11 @@ body {
     height: 80dvh;
     overflow: hidden;
 
-    #cssportal-grid {
+    #about-grid {
         display: grid;
         grid-template-rows: repeat(6, 1fr);
         grid-template-columns: repeat(12, 1fr);
-        gap: 25px 24px;
+        gap: 25px 25px;
         width: 100%;
         height: 100%;
     }
@@ -423,35 +427,48 @@ body {
             align-items: center;
             text-align: center;
             padding: 5px 50px;
+
+            h1 {
+                font-size: var(--font-size-h6);
+            }
+
+            p {
+                font-size: var(--font-size-p);
+            }
+
+            svg {
+                width: clamp(80px, 4vw, 120px);
+                height: clamp(80px, 4vw, 120px);
+            }
         }
     }
 
 
-    #div1 {
+    #about1 {
         grid-area: 1 / 1 / 4 / 4;
         border-radius: 50px;
         border: 1px solid #6e6e6f;
     }
 
-    #div2 {
+    #about2 {
         grid-area: 1 / 4 / 4 / 7;
         border-radius: 50px;
         border: 1px solid #6e6e6f;
     }
 
-    #div3 {
+    #about3 {
         grid-area: 4 / 1 / 7 / 4;
         border-radius: 50px;
         border: 1px solid #6e6e6f;
     }
 
-    #div4 {
+    #about4 {
         grid-area: 4 / 4 / 7 / 7;
         border-radius: 50px;
         border: 1px solid #6e6e6f;
     }
 
-    #div5 {
+    #about5 {
         grid-area: 1 / 7 / 7 / 13;
         background-image: url('/image/15405592.png');
         background-size: cover;
@@ -476,18 +493,18 @@ body {
 
     .about-me-name {
         position: relative;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         width: 100%;
         z-index: 1;
 
         h1 {
-            font-size: clamp(2rem, 6vw, 10rem);
+            font-size: clamp(2rem, 5vw, 10rem);
             line-height: 1.2;
             letter-spacing: .01px;
         }
 
         p {
-            font-size: clamp(.8rem, 1vw, 5rem);
+            font-size: var(--font-size-p);
             line-height: 1;
             letter-spacing: 2px;
             font-weight: 200;
@@ -499,9 +516,43 @@ body {
 
 // End About Section
 
+// Portfolio Section
 
+#portfolio {
+    height: 80dvh;
+    overflow: hidden;
 
+    #cssportal-grid {
+        display: grid;
+        grid-template-rows: repeat(12, 1fr);
+        grid-template-columns: repeat(12, 1fr);
+        gap: 25px 25px;
+        width: 100%;
+        height: 100%;
+    }
 
+    #div1 {
+        grid-area: 1 / 1 / 2 / 13;
+        background-color: rgba(65, 251, 161, 0.5);
+        border-radius: 50px;
+        border: 1px solid #6e6e6f;
+    }
+
+    #div2 {
+        grid-area: 2 / 1 / 13 / 7;
+        background-color: rgba(132, 79, 241, 0.5);
+        border-radius: 50px;
+        border: 1px solid #6e6e6f;
+    }
+
+    #div3 {
+        grid-area: 2 / 7 / 13 / 13;
+        background-color: rgba(99, 200, 164, 0.5);
+        border-radius: 50px;
+        border: 1px solid #6e6e6f;
+    }
+
+}
 
 
 
@@ -751,38 +802,67 @@ body {
 
         height: 110vh;
 
-        #cssportal-grid {
+        #about-grid {
             display: grid;
-            grid-template-rows: repeat(12, 1fr) !important;
+            grid-template-rows: repeat(11, 1fr) !important;
             grid-template-columns: repeat(6, 1fr) !important;
             gap: 20px !important;
             width: 100%;
             height: 100%;
         }
 
-        #div1 {
+        .about-div {
+
+            .about-div-content {
+                padding: 2px 10px !important;
+
+                svg {
+                    width: clamp(30px, 3vw, 60px);
+                    height: clamp(30px, 3vw, 60px);
+                }
+
+                p {
+                    font-size: var(--font-size-small) !important;
+                }
+            }
+        }
+
+        #about1 {
             grid-area: 1 / 1 / 3 / 7 !important;
             border-radius: 25px;
         }
 
-        #div2 {
+        #about2 {
             grid-area: 3 / 1 / 5 / 7 !important;
             border-radius: 25px;
         }
 
-        #div3 {
+        #about3 {
             grid-area: 5 / 1 / 7 / 7 !important;
             border-radius: 25px;
         }
 
-        #div4 {
+        #about4 {
             grid-area: 7 / 1 / 9 / 7 !important;
             border-radius: 25px;
         }
 
-        #div5 {
+        #about5 {
             grid-area: 9 / 1 / 13 / 7 !important;
+            border-radius: 25px;
+
+            .about-gradiant {
+                border-radius: 25px;
+            }
+
+            .about-me-name {
+                p {
+                    font-size: var(--font-size-small) !important;
+                }
+            }
         }
+
+
     }
 
     // End About Section
@@ -882,7 +962,7 @@ body {
     // About Section
 
     #about {
-        #cssportal-grid {
+        #about-grid {
             display: grid;
             grid-template-rows: repeat(8, 1fr);
             grid-template-columns: repeat(4, 1fr);
@@ -903,41 +983,40 @@ body {
                 justify-content: center;
                 align-items: center;
                 text-align: center;
-                padding: 5px 15px;
+                padding: 2px 15px;
 
                 svg {
-                    width: 50px;
-                    height: 50px;
-                    display: none;
+                    width: clamp(30px, 3vw, 60px);
+                    height: clamp(30px, 3vw, 60px);
                 }
             }
         }
 
-        #div1 {
+        #about1 {
             grid-area: 1 / 1 / 3 / 3;
 
         }
 
-        #div2 {
+        #about2 {
             grid-area: 1 / 3 / 3 / 5;
 
         }
 
-        #div3 {
+        #about3 {
             grid-area: 3 / 1 / 5 / 3;
 
         }
 
-        #div4 {
+        #about4 {
             grid-area: 3 / 3 / 5 / 5;
 
         }
 
-        #div5 {
+        #about5 {
             grid-area: 5 / 1 / 9 / 5;
 
             .about-me-name {
-                margin-bottom: 20px;
+                margin-bottom: 5px;
             }
         }
     }
