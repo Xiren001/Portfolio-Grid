@@ -117,7 +117,7 @@ html {
 // Layout
 .container-fluid {
     width: 100%;
-    padding: 20px;
+    padding: 25px;
     height: 100%;
 }
 
@@ -402,7 +402,7 @@ html {
 
 // About Section
 #about {
-    height: 80dvh;
+    height: 90dvh;
     overflow: hidden;
 
     #about-grid {
@@ -499,14 +499,13 @@ html {
 
         h1 {
             font-size: clamp(2rem, 5vw, 10rem);
-            line-height: 1.2;
+            line-height: 1;
             letter-spacing: .01px;
         }
 
         p {
             font-size: var(--font-size-p);
             line-height: 1;
-            letter-spacing: 2px;
             font-weight: 200;
             font-style: normal;
         }
@@ -519,37 +518,145 @@ html {
 // Portfolio Section
 
 #portfolio {
-    height: 80dvh;
+    height: 100dvh;
     overflow: hidden;
 
-    #cssportal-grid {
-        display: grid;
-        grid-template-rows: repeat(12, 1fr);
-        grid-template-columns: repeat(12, 1fr);
-        gap: 25px 25px;
-        width: 100%;
-        height: 100%;
-    }
+    .container-fluid {
+        padding-top: 0;
 
-    #div1 {
-        grid-area: 1 / 1 / 2 / 13;
-        background-color: rgba(65, 251, 161, 0.5);
-        border-radius: 50px;
-        border: 1px solid #6e6e6f;
-    }
+        #cssportal-grid {
+            display: grid;
+            grid-template-rows: repeat(6, 1fr);
+            grid-template-columns: repeat(6, 1fr);
+            gap: 25px;
+            width: 100%;
+            height: 100%;
 
-    #div2 {
-        grid-area: 2 / 1 / 13 / 7;
-        background-color: rgba(132, 79, 241, 0.5);
-        border-radius: 50px;
-        border: 1px solid #6e6e6f;
-    }
+            div {
+                padding: $padding;
+                border-radius: 50px;
+                border: 1px solid #6e6e6f;
 
-    #div3 {
-        grid-area: 2 / 7 / 13 / 13;
-        background-color: rgba(99, 200, 164, 0.5);
-        border-radius: 50px;
-        border: 1px solid #6e6e6f;
+                p {
+                    border: 1px solid $text-color;
+                    width: fit-content;
+                    padding: 5px;
+                    border-radius: 10px;
+                    background-color: rgba(0, 0, 0, 0.8);
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    font-size: var(--font-size-p);
+                }
+            }
+        }
+
+        #div1 {
+            grid-area: 1 / 1 / 3 / 4;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
+            background-size: 3rem 3rem;
+            background-position: 1rem 1rem, 1rem 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            -webkit-text-stroke: 2px $text-color;
+
+            h1 {
+                font-size: clamp(10rem, 10.5vw, 20rem);
+                font-weight: 700;
+                line-height: .8;
+                letter-spacing: .01px;
+
+                span {
+                    display: flex;
+                    width: 100%;
+                }
+            }
+        }
+
+        #div2 {
+            grid-area: 1 / 4 / 3 / 7;
+            background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
+            background-size: 3rem 3rem;
+            background-position: 1rem 1rem, 1rem 1rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            -webkit-text-stroke: 3px $text-color;
+
+            h1 {
+                font-size: clamp(10rem, 10.5vw, 20rem);
+                line-height: .8;
+                letter-spacing: .01px;
+                text-align: right;
+
+                span {
+                    display: flex;
+                    width: 100%;
+                }
+            }
+
+        }
+
+        #div3 {
+            grid-area: 3 / 1 / 7 / 3;
+            background-image: url('/image/web.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div4 {
+            grid-area: 3 / 3 / 5 / 4;
+            background-image: url('/image/web3.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div5 {
+            grid-area: 5 / 3 / 7 / 4;
+            background-image: url('/image/web5.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div6 {
+            grid-area: 3 / 4 / 5 / 5;
+            background-image: url('/image/web6.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div7 {
+            grid-area: 5 / 4 / 7 / 5;
+            background-image: url('/image/web7.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div8 {
+            grid-area: 3 / 5 / 7 / 6;
+            background-image: url('/image/web1.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        #div9 {
+            grid-area: 3 / 6 / 7 / 7;
+            background-image: url('/image/web2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
     }
 
 }
@@ -806,9 +913,13 @@ html {
             display: grid;
             grid-template-rows: repeat(11, 1fr) !important;
             grid-template-columns: repeat(6, 1fr) !important;
-            gap: 20px !important;
+            gap: 15px !important;
             width: 100%;
             height: 100%;
+
+            div {
+                border-radius: 25px !important;
+            }
         }
 
         .about-div {
@@ -829,31 +940,27 @@ html {
 
         #about1 {
             grid-area: 1 / 1 / 3 / 7 !important;
-            border-radius: 25px;
+
         }
 
         #about2 {
             grid-area: 3 / 1 / 5 / 7 !important;
-            border-radius: 25px;
+
         }
 
         #about3 {
             grid-area: 5 / 1 / 7 / 7 !important;
-            border-radius: 25px;
+
         }
 
         #about4 {
             grid-area: 7 / 1 / 9 / 7 !important;
-            border-radius: 25px;
+
         }
 
         #about5 {
             grid-area: 9 / 1 / 13 / 7 !important;
-            border-radius: 25px;
-
-            .about-gradiant {
-                border-radius: 25px;
-            }
+            border-radius: 25px !important;
 
             .about-me-name {
                 p {
@@ -861,11 +968,85 @@ html {
                 }
             }
         }
-
-
     }
 
     // End About Section
+
+    //  Portfolio Section
+
+    #portfolio {
+        .container-fluid {
+            padding-top: 0;
+
+            #cssportal-grid {
+                grid-template-rows: repeat(12, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr) !important;
+                gap: 15px !important;
+
+                div {
+                    border-radius: 25px !important;
+                }
+            }
+
+            #div1 {
+                grid-area: 1 / 1 / 3 / 2 !important;
+
+                h1 {
+                    font-size: clamp(2.5rem, 9vw, 20rem) !important;
+                }
+
+            }
+
+            #div2 {
+                grid-area: 1 / 2 / 3 / 3 !important;
+
+                h1 {
+                    font-size: clamp(2.5rem, 9vw, 20rem) !important;
+
+                    span {
+                        word-spacing: normal !important;
+                    }
+                }
+
+            }
+
+            #div3 {
+                grid-area: 3 / 1 / 7 / 3 !important;
+
+            }
+
+            #div4 {
+                grid-area: 7 / 1 / 9 / 2 !important;
+
+            }
+
+            #div5 {
+                grid-area: 9 / 1 / 11 / 2 !important;
+
+            }
+
+            #div6 {
+                grid-area: 7 / 2 / 9 / 3 !important;
+
+            }
+
+            #div7 {
+                grid-area: 9 / 2 / 11 / 3 !important;
+
+            }
+
+            #div8 {
+                grid-area: 11 / 1 / 13 / 2 !important;
+            }
+
+            #div9 {
+                grid-area: 11 / 2 / 13 / 3 !important;
+            }
+        }
+    }
+
+    // End portfolio Section
+
 }
 
 
@@ -969,6 +1150,10 @@ html {
             gap: 25px 24px;
             width: 100%;
             height: 100%;
+
+            div {
+                border-radius: 35px;
+            }
         }
 
         .about-div {
@@ -1023,4 +1208,84 @@ html {
 
     // End About Section
 
+    // Portfolio Section
+    #portfolio {
+        .container-fluid {
+            padding-top: 0;
+
+            #cssportal-grid {
+                grid-template-rows: repeat(12, 1fr);
+                grid-template-columns: repeat(4, 1fr);
+
+                div {
+                    border-radius: 35px;
+                    padding: 10px;
+                }
+            }
+
+            #div1 {
+                grid-area: 1 / 1 / 3 / 5;
+                -webkit-text-stroke: $primary-color;
+                background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
+                background-size: 3rem 3rem;
+                background-position: 2px 2px, 2px 2px;
+
+                h1 {
+                    font-size: clamp(7rem, 9vw, 20rem);
+                }
+            }
+
+            #div2 {
+                grid-area: 3 / 1 / 5 / 5;
+                -webkit-text-stroke: $primary-color;
+                background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
+                background-size: 3rem 3rem;
+                background-position: 2px 2px, 2px 2px;
+
+                h1 {
+                    font-size: clamp(7rem, 9vw, 20rem);
+
+                    span {
+                        word-spacing: -15px;
+                    }
+                }
+            }
+
+            #div3 {
+                grid-area: 5 / 1 / 9 / 3;
+
+            }
+
+            #div4 {
+                grid-area: 5 / 3 / 7 / 4;
+
+            }
+
+            #div5 {
+                grid-area: 7 / 3 / 9 / 4;
+
+            }
+
+            #div6 {
+                grid-area: 5 / 4 / 7 / 5;
+
+            }
+
+            #div7 {
+                grid-area: 7 / 4 / 9 / 5;
+
+            }
+
+            #div8 {
+                grid-area: 9 / 1 / 13 / 3;
+
+            }
+
+            #div9 {
+                grid-area: 9 / 3 / 13 / 5;
+            }
+        }
+    }
+
+    // End Portfolio Section
 }
