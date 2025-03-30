@@ -113,6 +113,11 @@ html {
     background-color: #000000;
 }
 
+::selection {
+    background-color: $secondary-color;
+    color: white;
+}
+
 
 // Layout
 .container-fluid {
@@ -275,12 +280,13 @@ html {
             justify-content: center;
             font-family: 'MyCustomFont', sans-serif;
             font-weight: normal;
-            -webkit-text-stroke: 15px $text-color;
+            -webkit-text-stroke: 16px $text-color;
             color: $text-color;
             font-size: clamp(8rem, 10vw, 12rem);
             text-align: center;
             line-height: 0.8;
             letter-spacing: 0.1px;
+            pointer-events: none;
 
             span {
                 text-align: center;
@@ -361,16 +367,23 @@ html {
             list-style: none;
             display: flex;
             gap: 2rem;
+            padding: 0 25px;
 
 
-            li a {
-                text-decoration: none;
-                color: $text-color;
-                font-size: 1rem;
-                transition: color 0.3s ease;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
-                &:hover {
-                    color: $secondary-color;
+                a {
+                    text-decoration: none;
+                    color: $text-color;
+                    font-size: var(--font-size-p);
+                    transition: color 0.3s ease;
+
+                    &:hover {
+                        color: $secondary-color;
+                    }
                 }
             }
         }
@@ -412,6 +425,7 @@ html {
         gap: 25px 25px;
         width: 100%;
         height: 100%;
+
     }
 
     .about-div {
@@ -419,6 +433,7 @@ html {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        position: relative;
 
         .about-div-content {
             width: 100%;
@@ -441,7 +456,59 @@ html {
                 height: clamp(80px, 4vw, 120px);
             }
         }
+
+        .about-info {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: var(--font-size-small);
+            background-color: $text-color;
+            color: $primary-color;
+            border: 1px solid $text-color;
+            border-radius: 50px;
+            height: clamp(20px, 2vw, 30px);
+            width: clamp(20px, 2vw, 30px);
+            overflow: hidden;
+            transition: width 0.5s ease-in-out, border-radius 0.5s ease-in-out;
+
+            .i {
+                font-weight: bolder;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .show {
+                opacity: 0;
+                visibility: hidden;
+                white-space: nowrap;
+                transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+            }
+        }
+
+        &:hover .about-info {
+            width: clamp(130px, 9.37vw, 250px);
+            border-radius: 25px;
+
+            .i {
+                display: none;
+            }
+
+            .show {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                justify-content: center;
+                align-items: center;
+                opacity: 1;
+                visibility: visible;
+                transition-delay: 0.5s; // Delay for opacity to sync with width animation
+            }
+        }
     }
+
 
 
     #about1 {
@@ -1222,6 +1289,12 @@ html {
                     width: clamp(30px, 3vw, 60px);
                     height: clamp(30px, 3vw, 60px);
                 }
+            }
+
+            .about-info {
+                position: absolute;
+                top: 15px;
+                right: 15px;
             }
         }
 
