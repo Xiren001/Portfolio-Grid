@@ -672,6 +672,40 @@ html {
   padding-top: 0;
 }
 
+.wrapper {
+  width: 100dvw;
+  height: 100dvh;
+  overflow: hidden;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+.sections {
+  display: flex;
+  width: calc(100dvw * 5);
+  height: 100dvh;
+}
+
+.section {
+  width: 100dvw;
+  height: 100dvh;
+}
+.section:nth-child(1) {
+  background: #F64747;
+}
+.section:nth-child(2) {
+  background: #22A7F0;
+}
+.section:nth-child(3) {
+  background: #F9690E;
+}
+.section:nth-child(4) {
+  background: #9B59B6;
+}
+.section:nth-child(5) {
+  background: #03C9A9;
+}
+
 @media (max-width: 576px) {
   #hero #hero-nav {
     grid-area: 1/2/2/12;

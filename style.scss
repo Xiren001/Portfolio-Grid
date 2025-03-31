@@ -50,6 +50,7 @@ $primary-color: #0A0908;
 $secondary-color: #22333B;
 $text-color: #F2F4F3;
 $padding: 20px;
+$panelcount: 5;
 
 // Global Styles
 h1,
@@ -796,6 +797,36 @@ html {
 }
 
 // Service Section end
+
+.wrapper {
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    perspective: 1000px;
+    overflow: hidden;
+}
+
+.sections {
+    display: flex;
+    width: calc(100dvw * #{$panelcount});
+    height: 100dvh;
+}
+
+.section {  
+    width: 100dvw;
+    height: 100dvh;
+
+    $colors: #F64747, #22A7F0, #F9690E, #9B59B6, #03C9A9;
+
+    @for $i from 1 through length($colors) {
+        &:nth-child(#{$i}) {
+            background: nth($colors, $i);
+        }
+    }
+}
+
+
+
 
 
 
