@@ -128,7 +128,6 @@ html {
 }
 
 
-
 // Hero Section
 #hero {
     height: 100dvh;
@@ -812,7 +811,7 @@ html {
     height: 100dvh;
 }
 
-.section {  
+.section {
     width: 100dvw;
     height: 100dvh;
 
@@ -881,9 +880,9 @@ html {
                 z-index: 999;
                 position: fixed;
                 top: 10px;
-                right: 20px;
-                width: 50px;
-                height: 80px;
+                right: 0;
+                width: 70px;
+                height: 70px;
 
                 header {
                     display: flex;
@@ -1074,7 +1073,6 @@ html {
     // About Section
 
     #about {
-
         height: 110vh;
 
         #about-grid {
@@ -1143,6 +1141,8 @@ html {
     //  Portfolio Section
 
     #portfolio {
+        height: 110vh;
+
         .container-fluid {
             padding-top: 0;
 
@@ -1229,7 +1229,7 @@ html {
 
     // Service Section
 
-    #portfolio {
+    #service {
         height: 100dvh;
         overflow: hidden;
 
@@ -1494,7 +1494,7 @@ html {
 
     // Service Section
 
-    #portfolio {
+    #service {
         height: 100dvh;
         overflow: hidden;
 

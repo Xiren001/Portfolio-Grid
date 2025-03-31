@@ -736,9 +736,9 @@ html {
     z-index: 999;
     position: fixed;
     top: 10px;
-    right: 20px;
-    width: 50px;
-    height: 80px;
+    right: 0;
+    width: 70px;
+    height: 70px;
   }
   #hero #hero-section #hero-nav header {
     display: flex;
@@ -929,6 +929,9 @@ html {
   #about #about5 .about-me-name p {
     font-size: var(--font-size-small) !important;
   }
+  #portfolio {
+    height: 110vh;
+  }
   #portfolio .container-fluid {
     padding-top: 0;
   }
@@ -986,11 +989,11 @@ html {
   #portfolio .container-fluid #portfolio9 {
     grid-area: 11/2/13/3 !important;
   }
-  #portfolio {
+  #service {
     height: 100dvh;
     overflow: hidden;
   }
-  #portfolio .container-fluid {
+  #service .container-fluid {
     padding-top: 0;
   }
 }
@@ -1164,11 +1167,11 @@ html {
   #portfolio .container-fluid #portfolio9 {
     grid-area: 9/3/13/5;
   }
-  #portfolio {
+  #service {
     height: 100dvh;
     overflow: hidden;
   }
-  #portfolio .container-fluid {
+  #service .container-fluid {
     padding-top: 0;
   }
 }/*# sourceMappingURL=style.css.map */
