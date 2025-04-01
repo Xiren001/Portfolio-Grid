@@ -1,5 +1,5 @@
 :root {
-  --font-size-h1: clamp(24px, 5vw, 44px);
+  --font-size-h1: clamp(18px, 5vw, 44px);
   --font-size-h2: clamp(22px, 4.5vw, 42px);
   --font-size-h3: clamp(20px, 4vw, 40px);
   --font-size-h4: clamp(18px, 3.5vw, 38px);
@@ -572,9 +572,6 @@ html {
 }
 #portfolio .container-fluid #portfolio1 {
   grid-area: 1/1/3/4;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
-  background-size: 3rem 3rem;
-  background-position: 1rem 1rem, 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -594,9 +591,6 @@ html {
 }
 #portfolio .container-fluid #portfolio2 {
   grid-area: 1/4/3/7;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
-  background-size: 3rem 3rem;
-  background-position: 1rem 1rem, 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -689,6 +683,7 @@ html {
   justify-content: center;
   align-items: center;
   gap: 20px;
+  transition: all 0.5s ease-in-out;
 }
 #service .container-fluid #cssportal-grid .service-div:nth-child(2), #service .container-fluid #cssportal-grid .service-div:nth-child(3) {
   flex-direction: row;
@@ -697,6 +692,7 @@ html {
   width: 40%;
   height: 100%;
   border-radius: 32px;
+  transition: all 0.5s ease-in-out;
 }
 #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text {
   width: 60%;
@@ -708,6 +704,8 @@ html {
 }
 #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text h1, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text h1 {
   font-size: var(--font-size-h1);
+  line-height: 1;
+  letter-spacing: 0.01px;
   text-transform: capitalize;
   line-height: 1;
   padding: 15px 0;
@@ -741,10 +739,11 @@ html {
   width: 100%;
   height: 40%;
   border-radius: 32px;
+  transition: all 0.5s ease-in-out;
 }
 #service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text {
   width: 100%;
-  height: 50%;
+  height: 60%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -752,6 +751,8 @@ html {
 }
 #service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text h1, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text h1 {
   font-size: var(--font-size-h1);
+  line-height: 1;
+  letter-spacing: 0.01px;
   text-transform: capitalize;
   line-height: 1;
   padding: 15px 0;
@@ -763,15 +764,7 @@ html {
   text-overflow: ellipsis;
   width: 100%;
 }
-#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-button, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-button {
-  width: 100%;
-  height: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
-  align-items: start;
-}
-#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-button a, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-button a {
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text a, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text a {
   border-radius: 32px;
   background-color: #F2F4F3;
   color: #0A0908;
@@ -780,17 +773,22 @@ html {
   border: 1px solid #F2F4F3;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
+  margin-top: auto;
 }
-#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-button a:hover, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-button a:hover {
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text a:hover, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text a:hover {
   background-color: #0A0908;
   color: #F2F4F3;
   border: 1px solid #F2F4F3;
 }
+#service .container-fluid #cssportal-grid .service-div:not(:first-child):hover {
+  background-color: #252525;
+  border: 1px solid #F2F4F3;
+}
+#service .container-fluid #cssportal-grid .service-div:not(:first-child):hover .service-image {
+  border: 1px solid #F2F4F3;
+}
 #service .container-fluid #div1 {
   grid-area: 1/1/3/13;
-  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
-  background-size: 3rem 3rem;
-  background-position: 1rem 1rem, 1rem 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -810,7 +808,6 @@ html {
 }
 #service .container-fluid #div2 {
   grid-area: 3/1/6/7;
-  background-color: #252525;
 }
 #service .container-fluid #div2 .service-image {
   background-image: url("/image/web1.jpg");
@@ -820,7 +817,6 @@ html {
 }
 #service .container-fluid #div3 {
   grid-area: 6/1/9/7;
-  background-color: #252525;
 }
 #service .container-fluid #div3 .service-image {
   background-image: url("/image/web2.jpg");
@@ -830,7 +826,6 @@ html {
 }
 #service .container-fluid #div4 {
   grid-area: 3/7/9/10;
-  background-color: #252525;
 }
 #service .container-fluid #div4 .service-image {
   background-image: url("/image/web3.jpg");
@@ -840,7 +835,6 @@ html {
 }
 #service .container-fluid #div5 {
   grid-area: 3/10/9/13;
-  background-color: #252525;
 }
 #service .container-fluid #div5 .service-image {
   background-image: url("/image/web5.jpg");
@@ -1030,7 +1024,7 @@ html {
     animation: fadeIn 1s ease-in-out forwards 3.5s;
   }
   #about {
-    height: 110vh;
+    height: 120vh;
   }
   #about #about-grid {
     display: grid;
@@ -1073,7 +1067,7 @@ html {
     font-size: var(--font-size-small) !important;
   }
   #portfolio {
-    height: 110vh;
+    height: 120vh;
   }
   #portfolio .container-fluid {
     padding-top: 0;
@@ -1085,6 +1079,7 @@ html {
   }
   #portfolio .container-fluid #portfolio-grid div {
     border-radius: 20px !important;
+    padding: 10px !important;
   }
   #portfolio .container-fluid #portfolio-grid div .portfolio-gradiant {
     padding: 0 10px !important;
@@ -1095,6 +1090,7 @@ html {
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
     width: 100% !important;
+    font-size: var(--font-size-small) !important;
   }
   #portfolio .container-fluid #portfolio1 {
     grid-area: 1/1/3/2 !important;
@@ -1133,11 +1129,51 @@ html {
     grid-area: 11/2/13/3 !important;
   }
   #service {
-    height: 100dvh;
-    overflow: hidden;
+    height: 200dvh !important;
   }
-  #service .container-fluid {
-    padding-top: 0;
+  #service .container-fluid #cssportal-grid {
+    grid-template-rows: repeat(9, 1fr) !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 15px !important;
+  }
+  #service .container-fluid #cssportal-grid .service-div {
+    border-radius: 20px !important;
+  }
+  #service .container-fluid #cssportal-grid .service-div .service-image {
+    border-radius: 5px !important;
+  }
+  #service .container-fluid #cssportal-grid .service-div .service-text {
+    border-radius: 5px !important;
+  }
+  #service .container-fluid #cssportal-grid .service-div .service-text p {
+    font-size: var(--font-size-small) !important;
+  }
+  #service .container-fluid #cssportal-grid .service-div .service-text:nth-child(4) a, #service .container-fluid #cssportal-grid .service-div .service-text:nth-child(5) a, #service .container-fluid #cssportal-grid .service-div .service-text:nth-child(2) a, #service .container-fluid #cssportal-grid .service-div .service-text:nth-child(3) a {
+    border-radius: 8px !important;
+    padding: 5px 10px !important;
+    font-size: var(--font-size-small) !important;
+  }
+  #service .container-fluid #cssportal-grid #div1 {
+    grid-area: 1/1/2/4 !important;
+    -webkit-text-stroke: #0A0908;
+  }
+  #service .container-fluid #cssportal-grid #div1 h1 {
+    font-size: clamp(2.8rem, 9vw, 20rem) !important;
+  }
+  #service .container-fluid #cssportal-grid #div1 h1 span {
+    word-spacing: -15px;
+  }
+  #service .container-fluid #cssportal-grid #div2 {
+    grid-area: 2/1/4/4 !important;
+  }
+  #service .container-fluid #cssportal-grid #div3 {
+    grid-area: 4/1/6/4 !important;
+  }
+  #service .container-fluid #cssportal-grid #div4 {
+    grid-area: 6/1/8/4 !important;
+  }
+  #service .container-fluid #cssportal-grid #div5 {
+    grid-area: 8/1/10/4 !important;
   }
 }
 @media (max-width: 991px) {
@@ -1199,6 +1235,9 @@ html {
       background-position: 0 -50%;
     }
   }
+  #about {
+    height: 120dvh;
+  }
   #about #about-grid {
     display: grid;
     grid-template-rows: repeat(8, 1fr);
@@ -1251,6 +1290,9 @@ html {
   #about #about5 .about-me-name {
     margin-bottom: 5px;
   }
+  #portfolio {
+    height: 140dvh;
+  }
   #portfolio .container-fluid {
     padding-top: 0;
   }
@@ -1260,18 +1302,18 @@ html {
   }
   #portfolio .container-fluid #portfolio-grid div {
     border-radius: 35px;
-    padding: 10px;
+    padding: 15px;
   }
   #portfolio .container-fluid #portfolio-grid div .portfolio-gradiant {
     border-radius: 35px;
     padding: 20px 10px;
   }
+  #portfolio .container-fluid #portfolio-grid div .portfolio-gradiant h2 {
+    font-size: var(--font-size-p);
+  }
   #portfolio .container-fluid #portfolio1 {
     grid-area: 1/1/3/5;
     -webkit-text-stroke: #0A0908;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
-    background-size: 3rem 3rem;
-    background-position: 2px 2px, 2px 2px;
   }
   #portfolio .container-fluid #portfolio1 h1 {
     font-size: clamp(7rem, 9vw, 20rem);
@@ -1279,9 +1321,6 @@ html {
   #portfolio .container-fluid #portfolio2 {
     grid-area: 3/1/5/5;
     -webkit-text-stroke: #0A0908;
-    background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
-    background-size: 3rem 3rem;
-    background-position: 2px 2px, 2px 2px;
   }
   #portfolio .container-fluid #portfolio2 h1 {
     font-size: clamp(7rem, 9vw, 20rem);
@@ -1311,10 +1350,96 @@ html {
     grid-area: 9/3/13/5;
   }
   #service {
-    height: 100dvh;
-    overflow: hidden;
+    height: 155dvh;
   }
-  #service .container-fluid {
-    padding-top: 0;
+  #service .container-fluid #cssportal-grid {
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+  }
+  #service .container-fluid #cssportal-grid .service-div {
+    border-radius: 35px;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2), #service .container-fluid #cssportal-grid .service-div:nth-child(3) {
+    flex-direction: column;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-image, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-image {
+    width: 100%;
+    height: 50%;
+    border-radius: 17px;
+    transition: all 0.5s ease-in-out;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 10px;
+    border-radius: 17px;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text h1, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text h1 {
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 5px 0;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text p, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text p {
+    padding: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text a, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text a {
+    border-radius: 32px;
+    background-color: #F2F4F3;
+    color: #0A0908;
+    padding: 10px 20px;
+    font-size: var(--font-size-p);
+    border: 1px solid #F2F4F3;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+    margin-top: auto;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text a:hover, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text a:hover {
+    background-color: #0A0908;
+    color: #F2F4F3;
+    border: 1px solid #F2F4F3;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-image, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-image {
+    height: 50%;
+    border-radius: 17px;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text {
+    height: 50%;
+    gap: 10px;
+    border-radius: 17px;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text h1, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text h1 {
+    padding: 5px 0;
+  }
+  #service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text p, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text p {
+    padding: 0;
+  }
+  #service .container-fluid #div1 {
+    grid-area: 1/1/2/5;
+    -webkit-text-stroke: #0A0908;
+  }
+  #service .container-fluid #div1 h1 {
+    font-size: clamp(7rem, 9vw, 20rem);
+  }
+  #service .container-fluid #div1 h1 span {
+    word-spacing: -15px;
+  }
+  #service .container-fluid #div2 {
+    grid-area: 2/1/5/3;
+  }
+  #service .container-fluid #div3 {
+    grid-area: 5/1/8/3;
+  }
+  #service .container-fluid #div4 {
+    grid-area: 2/3/5/5;
+  }
+  #service .container-fluid #div5 {
+    grid-area: 5/3/8/5;
   }
 }/*# sourceMappingURL=style.css.map */
