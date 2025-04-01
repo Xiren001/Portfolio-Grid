@@ -295,30 +295,68 @@
         </div>
     </section>
 
-    <div class="wrapper" id="js-wrapper">
-        <div class="sections" id="js-slideContainer">
-            <section class="section">
-
-            </section>
-            <section class="section">
-
-            </section>
-            <section class="section">
-
-            </section>
-            <section class="section">
-
-            </section>
-            <section class="section">
-
-            </section>
-        </div>
-    </div>
-
-
     <!-- Services Section -->
     <section id="service">
         <div class="container-fluid">
+            <div id="cssportal-grid">
+                <div id="div1" class="service-div" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>
+                        <span>SERVICES</span>
+                    </h1>
+                </div>
+                <div id="div2" class="service-div" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="service-image">
+
+                    </div>
+                    <div class="service-text">
+                        <h1>web development</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem error laudantium deleniti
+                            inventore quod recusandae iure, corrupti sapiente perferendis consequuntur at, maiores
+                            tempore magni, voluptatibus facere quasi placeat incidunt nihil?</p>
+                            <a href="">Get Started</a>
+                    </div>
+                </div>
+                <div id="div3" class="service-div" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="service-image">
+
+                    </div>
+                    <div class="service-text">
+                        <h1>web development</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem error laudantium deleniti
+                            inventore quod recusandae iure, corrupti sapiente perferendis consequuntur at, maiores
+                            tempore magni, voluptatibus facere quasi placeat incidunt nihil?</p>
+                            <a href="">Get Started</a>
+                    </div>
+                </div>
+                <div id="div4" class="service-div" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="service-image">
+
+                    </div>
+                    <div class="service-text">
+                        <h1>web development</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem error laudantium deleniti
+                            inventore quod recusandae iure, corrupti sapiente perferendis consequuntur at, maiores
+                            tempore magni, voluptatibus facere quasi placeat incidunt nihil?</p>
+                    </div>
+                    <div class="service-button">
+                        <a href="">Get Started</a>
+                    </div>
+                </div>
+                <div id="div5" class="service-div" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="service-image">
+
+                    </div>
+                    <div class="service-text">
+                        <h1>web development</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem error laudantium deleniti
+                            inventore quod recusandae iure, corrupti sapiente perferendis consequuntur at, maiores
+                            tempore magni, voluptatibus facere quasi placeat incidunt nihil?</p>
+                    </div>
+                    <div class="service-button">
+                        <a href="">Get Started</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -438,25 +476,8 @@
         });
         // hero gradient end
 
-        document.addEventListener("DOMContentLoaded", function () {
-            var controller = new ScrollMagic.Controller();
 
-            var horizontalSlide = gsap.timeline()
-                .to("#js-slideContainer", { x: "-100vw", duration: 1 })
-                .to("#js-slideContainer", { x: "-200vw", duration: 1 })
-                .to("#js-slideContainer", { x: "-300vw", duration: 1 })
-                .to("#js-slideContainer", { x: "-400vw", duration: 1 });
 
-            new ScrollMagic.Scene({
-                triggerElement: "#js-wrapper",
-                triggerHook: "onLeave",
-                duration: document.querySelector("#js-slideContainer").offsetWidth - window.innerWidth
-            })
-                .setPin("#js-wrapper")
-                .setTween(horizontalSlide)
-                .addTo(controller);
-        });
-        
 
 
     </script>

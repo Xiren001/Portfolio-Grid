@@ -5,7 +5,7 @@
   --font-size-h4: clamp(18px, 3.5vw, 38px);
   --font-size-h5: clamp(16px, 3vw, 36px);
   --font-size-h6: clamp(14px, 2vw, 34px);
-  --font-size-p: clamp(14px, 1vw, 24px);
+  --font-size-p: clamp(18px, 1vw, 24px);
   --font-size-small: clamp(12px, .8vw, 22px);
 }
 
@@ -101,7 +101,7 @@ html {
 }
 
 ::selection {
-  background-color: #22333B;
+  background-color: #252525;
   color: white;
 }
 
@@ -328,7 +328,7 @@ html {
   transition: color 0.3s ease;
 }
 #hero header .nav-links li a:hover {
-  color: #22333B;
+  color: #252525;
 }
 #hero header .hamburger {
   display: none;
@@ -671,39 +671,182 @@ html {
 #service .container-fluid {
   padding-top: 0;
 }
-
-.wrapper {
-  width: 100dvw;
-  height: 100dvh;
-  overflow: hidden;
-  perspective: 1000px;
-  overflow: hidden;
+#service .container-fluid #cssportal-grid {
+  display: grid;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  gap: 25px;
+  width: 100%;
+  height: 100%;
 }
-
-.sections {
+#service .container-fluid #cssportal-grid .service-div {
+  padding: 20px;
+  border-radius: 50px;
+  border: 1px solid #6e6e6f;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  width: calc(100dvw * 5);
-  height: 100dvh;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
-
-.section {
-  width: 100dvw;
-  height: 100dvh;
+#service .container-fluid #cssportal-grid .service-div:nth-child(2), #service .container-fluid #cssportal-grid .service-div:nth-child(3) {
+  flex-direction: row;
 }
-.section:nth-child(1) {
-  background: #F64747;
+#service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-image, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-image {
+  width: 40%;
+  height: 100%;
+  border-radius: 32px;
 }
-.section:nth-child(2) {
-  background: #22A7F0;
+#service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
 }
-.section:nth-child(3) {
-  background: #F9690E;
+#service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text h1, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text h1 {
+  font-size: var(--font-size-h1);
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 15px 0;
 }
-.section:nth-child(4) {
-  background: #9B59B6;
+#service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text p, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text p {
+  font-size: var(--font-size-p);
+  padding: 15px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 }
-.section:nth-child(5) {
-  background: #03C9A9;
+#service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text a, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text a {
+  border-radius: 32px;
+  background-color: #F2F4F3;
+  color: #0A0908;
+  padding: 10px 20px;
+  font-size: var(--font-size-p);
+  border: 1px solid #F2F4F3;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(2) .service-text a:hover, #service .container-fluid #cssportal-grid .service-div:nth-child(3) .service-text a:hover {
+  background-color: #0A0908;
+  color: #F2F4F3;
+  border: 1px solid #F2F4F3;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4), #service .container-fluid #cssportal-grid .service-div:nth-child(5) {
+  flex-direction: column;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-image, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-image {
+  width: 100%;
+  height: 40%;
+  border-radius: 32px;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text h1, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text h1 {
+  font-size: var(--font-size-h1);
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 15px 0;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-text p, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-text p {
+  font-size: var(--font-size-p);
+  padding: 15px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-button, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-button {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: start;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-button a, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-button a {
+  border-radius: 32px;
+  background-color: #F2F4F3;
+  color: #0A0908;
+  padding: 10px 20px;
+  font-size: var(--font-size-p);
+  border: 1px solid #F2F4F3;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+#service .container-fluid #cssportal-grid .service-div:nth-child(4) .service-button a:hover, #service .container-fluid #cssportal-grid .service-div:nth-child(5) .service-button a:hover {
+  background-color: #0A0908;
+  color: #F2F4F3;
+  border: 1px solid #F2F4F3;
+}
+#service .container-fluid #div1 {
+  grid-area: 1/1/3/13;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0), radial-gradient(rgba(255, 255, 255, 0.25) 3%, transparent 0);
+  background-size: 3rem 3rem;
+  background-position: 1rem 1rem, 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  -webkit-text-stroke: 2px #F2F4F3;
+}
+#service .container-fluid #div1 h1 {
+  font-size: clamp(10rem, 10.5vw, 20rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: 0.01px;
+}
+#service .container-fluid #div1 h1 span {
+  display: flex;
+  width: 100%;
+}
+#service .container-fluid #div2 {
+  grid-area: 3/1/6/7;
+  background-color: #252525;
+}
+#service .container-fluid #div2 .service-image {
+  background-image: url("/image/web1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#service .container-fluid #div3 {
+  grid-area: 6/1/9/7;
+  background-color: #252525;
+}
+#service .container-fluid #div3 .service-image {
+  background-image: url("/image/web2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#service .container-fluid #div4 {
+  grid-area: 3/7/9/10;
+  background-color: #252525;
+}
+#service .container-fluid #div4 .service-image {
+  background-image: url("/image/web3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#service .container-fluid #div5 {
+  grid-area: 3/10/9/13;
+  background-color: #252525;
+}
+#service .container-fluid #div5 .service-image {
+  background-image: url("/image/web5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 576px) {
@@ -1018,7 +1161,7 @@ html {
     grid-area: 11/11/13/13;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   #hero #hero-nav {
     grid-area: 1/3/2/11;
   }
