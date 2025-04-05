@@ -111,6 +111,65 @@ html {
   height: 100%;
 }
 
+/* Base hidden state */
+.island-nav {
+  visibility: hidden;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 80px);
+  width: 400px;
+  height: 50px;
+  border-radius: 20px 20px 0 0;
+  z-index: 3;
+  background-color: #252525;
+  color: #F2F4F3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
+
+/* When shown */
+.island-nav.show {
+  visibility: visible;
+  display: flex;
+  opacity: 1;
+  transform: translate(-50%, 0);
+  transition: all 0.3s ease-in-out;
+  background-color: #252525;
+  color: #F2F4F3;
+}
+
+/* Nav styles */
+.island-nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.island-nav .nav-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.island-nav .nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+.island-nav .nav-links a.active {
+  color: #F2F4F3;
+  border-bottom: 1px solid #F2F4F3;
+}
+
 #hero {
   height: 100dvh;
   overflow: hidden;
@@ -148,7 +207,7 @@ html {
 #hero #hero-nav {
   grid-area: 1/3/2/11;
   background-color: #0A0908;
-  border-radius: 2px 2px 50px 50px;
+  border-radius: 2px 2px 35px 35px;
   transform: translateY(-100px);
   animation: swipeIns 1.5s ease-out forwards 3s;
 }
@@ -162,7 +221,7 @@ html {
 }
 #hero #hero-name {
   grid-area: 12/1/13/3;
-  border-radius: 0 50px 0 0;
+  border-radius: 0 35px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +240,7 @@ html {
 #hero #hero-scroll {
   grid-area: 12/12/13/13;
   background-color: #0A0908;
-  border-radius: 50px 0 0 0;
+  border-radius: 35px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -291,8 +350,10 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
   height: 100%;
   opacity: 0;
+  overflow: hidden;
   animation: fadeIn 1s ease-in-out forwards 3.5s;
 }
 @keyframes fadeIn {
@@ -309,12 +370,12 @@ html {
   color: #F2F4F3;
   text-decoration: none;
   transition: all 0.3s ease;
+  padding: 0 70px 0 0;
 }
 #hero header .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
-  padding: 0 25px;
 }
 #hero header .nav-links li {
   display: flex;
@@ -329,6 +390,20 @@ html {
 }
 #hero header .nav-links li a:hover {
   color: #252525;
+}
+#hero header .nav-links .con {
+  display: none;
+}
+#hero header .nav-contact {
+  padding: 0 10px 0 0;
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+#hero header .nav-contact li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #hero header .hamburger {
   display: none;
@@ -844,7 +919,7 @@ html {
 }
 
 #testimonials {
-  height: 110dvh;
+  height: 100dvh;
   overflow: hidden;
 }
 #testimonials .container-fluid {
@@ -852,14 +927,14 @@ html {
 }
 #testimonials .container-fluid #cssportal-grid {
   display: grid;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-rows: repeat(6, 1fr);
   grid-template-columns: repeat(6, 1fr);
   gap: 25px;
   width: 100%;
   height: 100%;
 }
 #testimonials .container-fluid #cssportal-grid .testimonial-div {
-  padding: 20px;
+  padding: 30px;
   border-radius: 50px;
   border: 1px solid #6e6e6f;
   position: relative;
@@ -867,70 +942,149 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   transition: all 0.5s ease-in-out;
+  background-color: #F2F4F3;
 }
-#testimonials .container-fluid #div1 {
-  grid-area: 3/1/5/3;
-  background-color: rgba(149, 199, 44, 0.5);
+#testimonials .container-fluid #cssportal-grid .testimonial-div .qoute {
+  width: 100%;
+  height: 20%;
+  margin-top: -20px;
 }
-#testimonials .container-fluid #div2 {
-  grid-area: 3/3/5/5;
-  background-color: rgba(206, 30, 99, 0.5);
-}
-#testimonials .container-fluid #div3 {
-  grid-area: 3/5/5/7;
-  background-color: rgba(186, 149, 184, 0.5);
-}
-#testimonials .container-fluid #div4 {
-  grid-area: 5/1/7/2;
-  background-color: rgba(167, 163, 242, 0.5);
-}
-#testimonials .container-fluid #div5 {
-  grid-area: 5/2/7/4;
-  background-color: rgba(108, 247, 205, 0.5);
-}
-#testimonials .container-fluid #div6 {
-  grid-area: 5/4/7/6;
-  background-color: rgba(112, 138, 18, 0.5);
-}
-#testimonials .container-fluid #div7 {
-  grid-area: 5/6/7/7;
-  background-color: rgba(150, 66, 236, 0.5);
-}
-#testimonials .container-fluid #div8 {
-  grid-area: 7/1/9/3;
-  background-color: rgba(35, 239, 173, 0.5);
-}
-#testimonials .container-fluid #div9 {
-  grid-area: 7/3/9/5;
-  background-color: rgba(138, 204, 214, 0.5);
-}
-#testimonials .container-fluid #div10 {
-  grid-area: 7/5/9/7;
-  background-color: rgba(174, 102, 41, 0.5);
-}
-#testimonials .container-fluid #div11 {
-  grid-area: 1/1/3/7;
+#testimonials .container-fluid #cssportal-grid .testimonial-div .says {
+  width: 100%;
+  height: 50%;
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  -webkit-text-stroke: 2px #F2F4F3;
 }
-#testimonials .container-fluid #div11 h1 {
-  font-size: clamp(10rem, 10.5vw, 20rem);
-  font-weight: 700;
-  line-height: 0.8;
-  letter-spacing: 0.01px;
+#testimonials .container-fluid #cssportal-grid .testimonial-div .says p {
+  color: #252525;
+  text-align: left;
+  line-height: 1.2;
+  font-size: var(--font-size-p);
 }
-#testimonials .container-fluid #div11 h1 span {
-  display: flex;
+#testimonials .container-fluid #cssportal-grid .testimonial-div .name {
   width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+#testimonials .container-fluid #cssportal-grid .testimonial-div .name .testimonial-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid #F2F4F3;
+  transition: all 0.5s ease-in-out;
+}
+#testimonials .container-fluid #cssportal-grid .testimonial-div .name .testimonial-name {
+  width: 80%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+#testimonials .container-fluid #cssportal-grid .testimonial-div .name .testimonial-name h1 {
+  color: #0A0908;
+  text-align: center;
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: var(--font-size-p);
+}
+#testimonials .container-fluid #cssportal-grid .testimonial-div .name .testimonial-name p {
+  color: #252525;
+  text-align: center;
+  line-height: 1;
+  font-size: var(--font-size-small);
+}
+#testimonials .container-fluid #cssportal-grid #div1 {
+  grid-area: 1/1/3/3;
+}
+#testimonials .container-fluid #cssportal-grid #div1 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div2 {
+  grid-area: 1/3/3/5;
+}
+#testimonials .container-fluid #cssportal-grid #div2 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div3 {
+  grid-area: 1/5/3/7;
+}
+#testimonials .container-fluid #cssportal-grid #div3 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div4 {
+  grid-area: 3/1/5/3;
+}
+#testimonials .container-fluid #cssportal-grid #div4 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div5 {
+  grid-area: 3/3/5/5;
+}
+#testimonials .container-fluid #cssportal-grid #div5 p {
+  font-weight: var(--font-size-p);
+  color: #0A0908;
+}
+#testimonials .container-fluid #cssportal-grid #div6 {
+  grid-area: 3/5/5/7;
+}
+#testimonials .container-fluid #cssportal-grid #div6 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div7 {
+  grid-area: 5/1/7/3;
+}
+#testimonials .container-fluid #cssportal-grid #div7 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div8 {
+  grid-area: 5/3/7/5;
+}
+#testimonials .container-fluid #cssportal-grid #div8 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+#testimonials .container-fluid #cssportal-grid #div9 {
+  grid-area: 5/5/7/7;
+}
+#testimonials .container-fluid #cssportal-grid #div9 .testimonial-image {
+  background-image: url("/image/IMG_4492.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 576px) {
+  .island-nav {
+    display: none !important;
+  }
   #hero #hero-nav {
     grid-area: 1/2/2/12;
   }
@@ -969,6 +1123,12 @@ html {
     justify-content: center;
     align-items: center;
   }
+  #hero #hero-section #hero-nav header nav {
+    overflow: visible;
+  }
+  #hero #hero-section #hero-nav header .nav-contact {
+    display: none !important;
+  }
   #hero #hero-section #hero-nav header .nav-links {
     position: fixed !important;
     top: -30px;
@@ -982,6 +1142,13 @@ html {
     z-index: 998;
     transition: all 0.5s ease;
     padding-bottom: 5rem;
+  }
+  #hero #hero-section #hero-nav header .nav-links .con {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
   }
   @keyframes swipeInss {
     0% {
@@ -1264,64 +1431,58 @@ html {
     grid-area: 8/1/10/4 !important;
   }
   #testimonials {
-    height: 110dvh;
+    height: 220dvh !important;
   }
   #testimonials .container-fluid #cssportal-grid {
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(17, 1fr) !important;
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px !important;
   }
   #testimonials .container-fluid #cssportal-grid .testimonial-div {
     border-radius: 20px !important;
+    padding: 20px !important;
+  }
+  #testimonials .container-fluid #cssportal-grid .testimonial-div .qoute svg {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  #testimonials .container-fluid #cssportal-grid .testimonial-div .says p {
+    font-size: var(--font-size-small) !important;
+  }
+  #testimonials .container-fluid #cssportal-grid .testimonial-div .name .testimonial-image {
+    width: 50px !important;
+    height: 50px !important;
+    margin-left: -5px !important;
+  }
+  #testimonials .container-fluid #cssportal-grid .testimonial-div .name .testimonial-name h1 {
+    font-size: var(--font-size-small) !important;
   }
   #testimonials .container-fluid #div1 {
-    grid-area: 3/1/5/3;
-    background-color: rgba(149, 199, 44, 0.5);
+    grid-area: 3/1/5/3 !important;
   }
   #testimonials .container-fluid #div2 {
-    grid-area: 3/3/5/5;
-    background-color: rgba(206, 30, 99, 0.5);
+    grid-area: 5/1/7/3 !important;
   }
   #testimonials .container-fluid #div3 {
-    grid-area: 3/5/5/7;
-    background-color: rgba(186, 149, 184, 0.5);
+    grid-area: 7/1/9/3 !important;
   }
   #testimonials .container-fluid #div4 {
-    grid-area: 5/1/7/2;
-    background-color: rgba(167, 163, 242, 0.5);
+    grid-area: 9/1/11/3 !important;
   }
   #testimonials .container-fluid #div5 {
-    grid-area: 5/2/7/4;
-    background-color: rgba(108, 247, 205, 0.5);
+    grid-area: 1/1/3/3 !important;
   }
   #testimonials .container-fluid #div6 {
-    grid-area: 5/4/7/6;
-    background-color: rgba(112, 138, 18, 0.5);
+    grid-area: 11/1/13/3 !important;
   }
   #testimonials .container-fluid #div7 {
-    grid-area: 5/6/7/7;
-    background-color: rgba(150, 66, 236, 0.5);
+    grid-area: 13/1/15/3 !important;
   }
   #testimonials .container-fluid #div8 {
-    grid-area: 7/1/9/3;
-    background-color: rgba(35, 239, 173, 0.5);
+    grid-area: 15/1/13/3 !important;
   }
   #testimonials .container-fluid #div9 {
-    grid-area: 7/3/9/5;
-    background-color: rgba(138, 204, 214, 0.5);
-  }
-  #testimonials .container-fluid #div10 {
-    grid-area: 7/5/9/7;
-    background-color: rgba(174, 102, 41, 0.5);
-  }
-  #testimonials .container-fluid #div11 {
-    grid-area: 1/1/3/7;
-  }
-  #testimonials .container-fluid #div11 h1 {
-    font-size: clamp(2.8rem, 9vw, 20rem) !important;
-  }
-  #testimonials .container-fluid #div11 h1 span {
-    word-spacing: -15px;
+    grid-area: 17/1/15/3 !important;
   }
 }
 @media (max-width: 991px) {
@@ -1591,62 +1752,43 @@ html {
     grid-area: 5/3/8/5;
   }
   #testimonials {
-    height: 110dvh;
+    height: 180dvh;
   }
   #testimonials .container-fluid #cssportal-grid {
-    grid-template-rows: repeat(8, 1fr);
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   #testimonials .container-fluid #cssportal-grid .testimonial-div {
     border-radius: 35px;
   }
-  #testimonials .container-fluid #div1 {
+  #testimonials .container-fluid #cssportal-grid .testimonial-div .qoute {
+    margin-top: 0;
+  }
+  #testimonials .container-fluid #cssportal-grid #div1 {
     grid-area: 3/1/5/3;
-    background-color: rgba(149, 199, 44, 0.5);
   }
-  #testimonials .container-fluid #div2 {
+  #testimonials .container-fluid #cssportal-grid #div2 {
     grid-area: 3/3/5/5;
-    background-color: rgba(206, 30, 99, 0.5);
   }
-  #testimonials .container-fluid #div3 {
-    grid-area: 3/5/5/7;
-    background-color: rgba(186, 149, 184, 0.5);
+  #testimonials .container-fluid #cssportal-grid #div3 {
+    grid-area: 5/1/7/3;
   }
-  #testimonials .container-fluid #div4 {
-    grid-area: 5/1/7/2;
-    background-color: rgba(167, 163, 242, 0.5);
+  #testimonials .container-fluid #cssportal-grid #div4 {
+    grid-area: 5/3/7/5;
   }
-  #testimonials .container-fluid #div5 {
-    grid-area: 5/2/7/4;
-    background-color: rgba(108, 247, 205, 0.5);
+  #testimonials .container-fluid #cssportal-grid #div5 {
+    grid-area: 1/1/3/5;
   }
-  #testimonials .container-fluid #div6 {
-    grid-area: 5/4/7/6;
-    background-color: rgba(112, 138, 18, 0.5);
-  }
-  #testimonials .container-fluid #div7 {
-    grid-area: 5/6/7/7;
-    background-color: rgba(150, 66, 236, 0.5);
-  }
-  #testimonials .container-fluid #div8 {
+  #testimonials .container-fluid #cssportal-grid #div6 {
     grid-area: 7/1/9/3;
-    background-color: rgba(35, 239, 173, 0.5);
   }
-  #testimonials .container-fluid #div9 {
+  #testimonials .container-fluid #cssportal-grid #div7 {
     grid-area: 7/3/9/5;
-    background-color: rgba(138, 204, 214, 0.5);
   }
-  #testimonials .container-fluid #div10 {
-    grid-area: 7/5/9/7;
-    background-color: rgba(174, 102, 41, 0.5);
+  #testimonials .container-fluid #cssportal-grid #div8 {
+    grid-area: 9/1/11/3;
   }
-  #testimonials .container-fluid #div11 {
-    grid-area: 1/1/3/7;
-  }
-  #testimonials .container-fluid #div11 h1 {
-    font-size: clamp(7rem, 9vw, 20rem);
-  }
-  #testimonials .container-fluid #div11 h1 span {
-    word-spacing: -15px;
+  #testimonials .container-fluid #cssportal-grid #div9 {
+    grid-area: 9/3/11/5;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -127,6 +127,68 @@ html {
     height: 100%;
 }
 
+/* Base hidden state */
+.island-nav {
+    visibility: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 80px);
+    width: 400px;
+    height: 50px;
+    border-radius: 20px 20px 0 0;
+    z-index: 3;
+    background-color: $secondary-color;
+    color: $text-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When shown */
+.island-nav.show {
+    visibility: visible;
+    display: flex;
+    opacity: 1;
+    transform: translate(-50%, 0);
+    transition: all 0.3s ease-in-out;
+    background-color: $secondary-color;
+    color: $text-color;
+}
+
+/* Nav styles */
+.island-nav .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.island-nav .nav-links li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.island-nav .nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.island-nav .nav-links a.active {
+    color: $text-color;
+    border-bottom: 1px solid $text-color;
+
+}
+
+
 
 // Hero Section
 #hero {
@@ -170,7 +232,7 @@ html {
     #hero-nav {
         grid-area: 1 / 3 / 2 / 11;
         background-color: $primary-color;
-        border-radius: 2px 2px 50px 50px;
+        border-radius: 2px 2px 35px 35px;
 
         transform: translateY(-100px);
         animation: swipeIns 1.5s ease-out forwards 3s;
@@ -189,7 +251,7 @@ html {
 
     #hero-name {
         grid-area: 12 / 1 / 13 / 3;
-        border-radius: 0 50px 0 0;
+        border-radius: 0 35px 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -210,7 +272,7 @@ html {
     #hero-scroll {
         grid-area: 12/12/13/13;
         background-color: $primary-color;
-        border-radius: 50px 0 0 0;
+        border-radius: 35px 0 0 0;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -338,8 +400,10 @@ html {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: $padding;
             height: 100%;
             opacity: 0;
+            overflow: hidden;
             animation: fadeIn 1s ease-in-out forwards 3.5s;
 
             @keyframes fadeIn {
@@ -360,6 +424,7 @@ html {
             color: $text-color;
             text-decoration: none;
             transition: all 0.3s ease;
+            padding: 0 $padding + 50px 0 0;
         }
 
         // Navigation Links
@@ -367,8 +432,6 @@ html {
             list-style: none;
             display: flex;
             gap: 2rem;
-            padding: 0 25px;
-
 
             li {
                 display: flex;
@@ -385,6 +448,23 @@ html {
                         color: $secondary-color;
                     }
                 }
+            }
+
+            .con {
+                display: none;
+            }
+        }
+
+        .nav-contact {
+            padding: 0 $padding - 10px 0 0;
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
         }
 
@@ -1006,7 +1086,7 @@ html {
 // testimonial Section
 
 #testimonials {
-    height: 110dvh;
+    height: 100dvh;
     overflow: hidden;
 
     .container-fluid {
@@ -1014,14 +1094,14 @@ html {
 
         #cssportal-grid {
             display: grid;
-            grid-template-rows: repeat(8, 1fr);
+            grid-template-rows: repeat(6, 1fr);
             grid-template-columns: repeat(6, 1fr);
             gap: 25px;
             width: 100%;
             height: 100%;
 
             .testimonial-div {
-                padding: $padding;
+                padding: $padding + 10px;
                 border-radius: 50px;
                 border: 1px solid #6e6e6f;
                 position: relative;
@@ -1029,79 +1109,168 @@ html {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                gap: $padding;
+                flex-direction: column;
+                gap: $padding - 10px;
                 transition: all .5s ease-in-out;
-            }
-        }
+                background-color: $text-color;
 
-        #div1 {
-            grid-area: 3 / 1 / 5 / 3;
-            background-color: rgba(149, 199, 44, 0.5);
-        }
-
-        #div2 {
-            grid-area: 3 / 3 / 5 / 5;
-            background-color: rgba(206, 30, 99, 0.5);
-        }
-
-        #div3 {
-            grid-area: 3 / 5 / 5 / 7;
-            background-color: rgba(186, 149, 184, 0.5);
-        }
-
-        #div4 {
-            grid-area: 5 / 1 / 7 / 2;
-            background-color: rgba(167, 163, 242, 0.5);
-        }
-
-        #div5 {
-            grid-area: 5 / 2 / 7 / 4;
-            background-color: rgba(108, 247, 205, 0.5);
-        }
-
-        #div6 {
-            grid-area: 5 / 4 / 7 / 6;
-            background-color: rgba(112, 138, 18, 0.5);
-        }
-
-        #div7 {
-            grid-area: 5 / 6 / 7 / 7;
-            background-color: rgba(150, 66, 236, 0.5);
-        }
-
-        #div8 {
-            grid-area: 7 / 1 / 9 / 3;
-            background-color: rgba(35, 239, 173, 0.5);
-        }
-
-        #div9 {
-            grid-area: 7 / 3 / 9 / 5;
-            background-color: rgba(138, 204, 214, 0.5);
-        }
-
-        #div10 {
-            grid-area: 7 / 5 / 9 / 7;
-            background-color: rgba(174, 102, 41, 0.5);
-        }
-
-        #div11 {
-            grid-area: 1 / 1 / 3 / 7;
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            overflow: hidden;
-            -webkit-text-stroke: 2px $text-color;
-
-            h1 {
-                font-size: clamp(10rem, 10.5vw, 20rem);
-                font-weight: 700;
-                line-height: .8;
-                letter-spacing: .01px;
-
-                span {
-                    display: flex;
+                .qoute {
                     width: 100%;
+                    height: 20%;
+                    margin-top: -20px;
+                }
+
+                .says {
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    p {
+                        color: $secondary-color;
+                        text-align: left;
+                        line-height: 1.2;
+                        font-size: var(--font-size-p);
+                    }
+                }
+
+                .name {
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: $padding - 10px;
+
+                    .testimonial-image {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        border: 1px solid $text-color;
+                        transition: all .5s ease-in-out;
+                    }
+
+                    .testimonial-name {
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        align-items: flex-start;
+                        justify-content: center;
+                        flex-direction: column;
+
+                        h1 {
+                            color: $primary-color;
+                            text-align: center;
+                            line-height: 1.2;
+                            font-weight: 500;
+                            font-size: var(--font-size-p);
+                        }
+
+                        p {
+                            color: $secondary-color;
+                            text-align: center;
+                            line-height: 1;
+                            font-size: var(--font-size-small);
+                        }
+                    }
+                }
+            }
+
+            #div1 {
+                grid-area: 1 / 1 / 3 / 3;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div2 {
+                grid-area: 1 / 3 / 3 / 5;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div3 {
+                grid-area: 1 / 5 / 3 / 7;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div4 {
+                grid-area: 3 / 1 / 5 / 3;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div5 {
+                grid-area: 3 / 3 / 5 / 5;
+
+                p {
+                    font-weight: var(--font-size-p);
+                    color: $primary-color;
+                }
+            }
+
+            #div6 {
+                grid-area: 3 / 5 / 5 / 7;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div7 {
+                grid-area: 5 / 1 / 7 / 3;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div8 {
+                grid-area: 5 / 3 / 7 / 5;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            #div9 {
+                grid-area: 5 / 5 / 7 / 7;
+
+                .testimonial-image {
+                    background-image: url('/image/IMG_4492.JPG');
+                    background-size: cover;
+                    background-position: center;
+                    background-repeat: no-repeat;
                 }
             }
         }
@@ -1122,6 +1291,9 @@ html {
 // Responsive Adjustments
 // Mobile (Small screens)
 @media (max-width: 576px) {
+    .island-nav {
+        display: none !important;
+    }
 
     // Hero Section
     #hero {
@@ -1176,6 +1348,14 @@ html {
                     justify-content: center;
                     align-items: center;
 
+                    nav {
+                        overflow: visible;
+                    }
+
+                    .nav-contact {
+                        display: none !important;
+                    }
+
                     .nav-links {
                         position: fixed !important;
                         top: -30px;
@@ -1190,6 +1370,13 @@ html {
                         transition: all 0.5s ease;
                         padding-bottom: 5rem;
 
+                        .con {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            align-items: center;
+                            gap: $padding;
+                        }
                     }
 
                     @keyframes swipeInss {
@@ -1595,81 +1782,94 @@ html {
     // testimonial Section
 
     #testimonials {
-        height: 110dvh;
+        height: 220dvh !important;
 
         .container-fluid {
 
-
             #cssportal-grid {
-                grid-template-rows: repeat(8, 1fr);
-                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(17, 1fr) !important;
+                grid-template-columns: repeat(2, 1fr) !important;
                 gap: 15px !important;
 
                 .testimonial-div {
                     border-radius: 20px !important;
+                    padding: $padding !important;
+
+                    .qoute {
+
+                        svg {
+                            width: 30px !important;
+                            height: 30px !important;
+                        }
+                    }
+
+                    .says {
+
+                        p {
+                            font-size: var(--font-size-small) !important;
+                        }
+                    }
+
+                    .name {
+
+                        .testimonial-image {
+                            width: 50px !important;
+                            height: 50px !important;
+                            margin-left: -5px !important;
+                        }
+
+                        .testimonial-name {
+                            h1 {
+                                font-size: var(--font-size-small) !important;
+                            }
+                        }
+                    }
                 }
             }
 
             #div1 {
-                grid-area: 3 / 1 / 5 / 3;
-                background-color: rgba(149, 199, 44, 0.5);
+                grid-area: 3 / 1 / 5 / 3 !important;
+
             }
 
             #div2 {
-                grid-area: 3 / 3 / 5 / 5;
-                background-color: rgba(206, 30, 99, 0.5);
+                grid-area: 5 / 1 / 7 / 3 !important;
+
             }
 
             #div3 {
-                grid-area: 3 / 5 / 5 / 7;
-                background-color: rgba(186, 149, 184, 0.5);
+                grid-area: 7 / 1 / 9 / 3 !important;
+
             }
 
             #div4 {
-                grid-area: 5 / 1 / 7 / 2;
-                background-color: rgba(167, 163, 242, 0.5);
+                grid-area: 9 / 1 / 11 / 3 !important;
+
             }
 
             #div5 {
-                grid-area: 5 / 2 / 7 / 4;
-                background-color: rgba(108, 247, 205, 0.5);
+                grid-area: 1 / 1 / 3 / 3 !important;
+
             }
 
             #div6 {
-                grid-area: 5 / 4 / 7 / 6;
-                background-color: rgba(112, 138, 18, 0.5);
+                grid-area: 11 / 1 / 13 / 3 !important;
+
             }
 
             #div7 {
-                grid-area: 5 / 6 / 7 / 7;
-                background-color: rgba(150, 66, 236, 0.5);
+                grid-area: 13 / 1 / 15 / 3 !important;
+
             }
 
             #div8 {
-                grid-area: 7 / 1 / 9 / 3;
-                background-color: rgba(35, 239, 173, 0.5);
+                grid-area: 15 / 1 / 13 / 3 !important;
+
             }
 
             #div9 {
-                grid-area: 7 / 3 / 9 / 5;
-                background-color: rgba(138, 204, 214, 0.5);
-            }
+                grid-area: 17 / 1 / 15 / 3 !important;
 
-            #div10 {
-                grid-area: 7 / 5 / 9 / 7;
-                background-color: rgba(174, 102, 41, 0.5);
-            }
-
-            #div11 {
-                grid-area: 1 / 1 / 3 / 7;
-
-                h1 {
-                    font-size: clamp(2.8rem, 9vw, 20rem) !important;
-
-                    span {
-                        word-spacing: -15px;
-                    }
-                }
             }
         }
     }
@@ -2059,78 +2259,65 @@ html {
     // testimonial Section
 
     #testimonials {
-        height: 110dvh;
+        height: 180dvh;
 
         .container-fluid {
 
             #cssportal-grid {
-                grid-template-rows: repeat(8, 1fr);
-                grid-template-columns: repeat(6, 1fr);
+                grid-template-rows: repeat(10, 1fr);
+                grid-template-columns: repeat(4, 1fr);
 
                 .testimonial-div {
                     border-radius: 35px;
-                }
-            }
 
-            #div1 {
-                grid-area: 3 / 1 / 5 / 3;
-                background-color: rgba(149, 199, 44, 0.5);
-            }
-
-            #div2 {
-                grid-area: 3 / 3 / 5 / 5;
-                background-color: rgba(206, 30, 99, 0.5);
-            }
-
-            #div3 {
-                grid-area: 3 / 5 / 5 / 7;
-                background-color: rgba(186, 149, 184, 0.5);
-            }
-
-            #div4 {
-                grid-area: 5 / 1 / 7 / 2;
-                background-color: rgba(167, 163, 242, 0.5);
-            }
-
-            #div5 {
-                grid-area: 5 / 2 / 7 / 4;
-                background-color: rgba(108, 247, 205, 0.5);
-            }
-
-            #div6 {
-                grid-area: 5 / 4 / 7 / 6;
-                background-color: rgba(112, 138, 18, 0.5);
-            }
-
-            #div7 {
-                grid-area: 5 / 6 / 7 / 7;
-                background-color: rgba(150, 66, 236, 0.5);
-            }
-
-            #div8 {
-                grid-area: 7 / 1 / 9 / 3;
-                background-color: rgba(35, 239, 173, 0.5);
-            }
-
-            #div9 {
-                grid-area: 7 / 3 / 9 / 5;
-                background-color: rgba(138, 204, 214, 0.5);
-            }
-
-            #div10 {
-                grid-area: 7 / 5 / 9 / 7;
-                background-color: rgba(174, 102, 41, 0.5);
-            }
-
-            #div11 {
-                grid-area: 1 / 1 / 3 / 7;
-
-                h1 {
-                    font-size: clamp(7rem, 9vw, 20rem);
-
-                    span {
-                        word-spacing: -15px;
+                    .qoute {
+                        margin-top: 0;
                     }
+                }
+
+                #div1 {
+                    grid-area: 3 / 1 / 5 / 3;
+
+                }
+
+                #div2 {
+                    grid-area: 3 / 3 / 5 / 5;
+
+                }
+
+                #div3 {
+                    grid-area: 5 / 1 / 7 / 3;
+
+                }
+
+                #div4 {
+                    grid-area: 5 / 3 / 7 / 5;
+
+                }
+
+                #div5 {
+                    grid-area: 1 / 1 / 3 / 5;
+
+                }
+
+                #div6 {
+                    grid-area: 7 / 1 / 9 / 3;
+
+                }
+
+                #div7 {
+                    grid-area: 7 / 3 / 9 / 5;
+
+                }
+
+                #div8 {
+                    grid-area: 9 / 1 / 11 / 3;
+
+                }
+
+                #div9 {
+                    grid-area: 9 / 3 / 11 / 5;
+
                 }
             }
         }
