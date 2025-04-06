@@ -570,8 +570,8 @@
     <section id="testimonials">
         <div class="container-fluid">
 
-            <div id="cssportal-grid">
-                <div id="div1" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+            <div id="testimonials-grid">
+                <div id="testimonials1" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -599,7 +599,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div2" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials2" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -627,7 +627,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div3" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials3" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -655,7 +655,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div4" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials4" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -683,7 +683,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div5" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials5" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="#000000" width="101px" height="101px"
                             viewBox="0 0 24 24">
@@ -702,7 +702,7 @@
                     <div class="name">
                     </div>
                 </div>
-                <div id="div6" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials6" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -730,7 +730,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div7" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials7" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -758,7 +758,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div8" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials8" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -786,7 +786,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="div9" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
+                <div id="testimonials9" class="testimonial-div" data-aos="fade-up" data-aos-duration="1000">
                     <div class="qoute">
                         <svg fill="#000000" width="75px" height="75px" viewBox="0 0 8 8"
                             xmlns="http://www.w3.org/2000/svg">
@@ -819,25 +819,21 @@
     </section>
 
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container-fluid">
-
-        </div>
-    </section>
-
-
-
-
-
-
-
-
-
     <!-- Footer -->
     <footer>
         <div class="container-fluid">
-
+            <div id="cssportal-grid">
+                <div id="div9">div9</div>
+                <div id="div1">div1</div>
+                <div id="div2">div2</div>
+                <div id="div3">div3</div>
+                <div id="div4">div4</div>
+                <div id="div5">div5</div>
+                <div id="div6">div6</div>
+                <div id="div7">div7</div>
+                <div id="div8">div8</div>
+            </div>
+            
         </div>
     </footer>
 
@@ -856,7 +852,6 @@
 
         const islandNav = document.querySelector('.island-nav');
         const beforeAbout = document.querySelector('#before-about');
-
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
@@ -869,20 +864,18 @@
         }, {
             threshold: 0.01
         });
-
         observer.observe(beforeAbout);
 
+        
         const navLinks = document.querySelectorAll('.island-nav .nav-links a');
         const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
 
         function setActiveNav() {
             const scrollPosition = window.scrollY + window.innerHeight / 2;
-
             sections.forEach((section, index) => {
                 const offsetTop = section.offsetTop;
                 const offsetBottom = offsetTop + section.offsetHeight;
                 const link = navLinks[index];
-
                 if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
                     link.classList.add('active');
                 } else {
