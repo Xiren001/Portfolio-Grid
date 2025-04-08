@@ -4,7 +4,7 @@
   --font-size-h3: clamp(20px, 4vw, 40px);
   --font-size-h4: clamp(18px, 3.5vw, 38px);
   --font-size-h5: clamp(16px, 3vw, 36px);
-  --font-size-h6: clamp(14px, 2vw, 34px);
+  --font-size-h6: clamp(18px, 1.5vw, 34px);
   --font-size-p: clamp(18px, 1vw, 24px);
   --font-size-small: clamp(12px, .8vw, 22px);
 }
@@ -536,9 +536,9 @@ html {
 }
 #about #about5 {
   grid-area: 1/7/7/13;
-  background-image: url("/image/15405592.png");
+  background-image: url("/image/me.png");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   border-radius: 50px;
   border: 1px solid #6e6e6f;
@@ -568,9 +568,10 @@ html {
 }
 #about .about-me-name p {
   font-size: var(--font-size-p);
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 200;
   font-style: normal;
+  padding: 10px 0;
 }
 
 #portfolio {
@@ -734,7 +735,7 @@ html {
 }
 
 #service {
-  height: 110dvh;
+  height: 120dvh;
   overflow: hidden;
 }
 #service .container-fluid {
@@ -786,18 +787,20 @@ html {
   padding: 15px 0;
 }
 #service .container-fluid #service-grid .service-div:nth-child(2) .service-text p, #service .container-fluid #service-grid .service-div:nth-child(3) .service-text p {
-  font-size: var(--font-size-p);
-  padding: 15px 0;
+  font-size: var(--font-size-small);
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
+}
+#service .container-fluid #service-grid .service-div:nth-child(2) .service-text p svg, #service .container-fluid #service-grid .service-div:nth-child(3) .service-text p svg {
+  margin-bottom: -2px;
 }
 #service .container-fluid #service-grid .service-div:nth-child(2) .service-text a, #service .container-fluid #service-grid .service-div:nth-child(3) .service-text a {
   border-radius: 32px;
   background-color: #F2F4F3;
   color: #0A0908;
-  padding: 10px 20px;
-  font-size: var(--font-size-p);
+  padding: 5px 20px;
+  font-size: var(--font-size-small);
   border: 1px solid #F2F4F3;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -812,13 +815,13 @@ html {
 }
 #service .container-fluid #service-grid .service-div:nth-child(4) .service-image, #service .container-fluid #service-grid .service-div:nth-child(5) .service-image {
   width: 100%;
-  height: 40%;
+  height: 50%;
   border-radius: 32px;
   transition: all 0.5s ease-in-out;
 }
 #service .container-fluid #service-grid .service-div:nth-child(4) .service-text, #service .container-fluid #service-grid .service-div:nth-child(5) .service-text {
   width: 100%;
-  height: 60%;
+  height: 50%;
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -833,18 +836,21 @@ html {
   padding: 15px 0;
 }
 #service .container-fluid #service-grid .service-div:nth-child(4) .service-text p, #service .container-fluid #service-grid .service-div:nth-child(5) .service-text p {
-  font-size: var(--font-size-p);
+  font-size: var(--font-size-small);
   padding: 15px 0;
   overflow: hidden;
   text-overflow: ellipsis;
   width: 100%;
 }
+#service .container-fluid #service-grid .service-div:nth-child(4) .service-text p svg, #service .container-fluid #service-grid .service-div:nth-child(5) .service-text p svg {
+  margin-bottom: -2px;
+}
 #service .container-fluid #service-grid .service-div:nth-child(4) .service-text a, #service .container-fluid #service-grid .service-div:nth-child(5) .service-text a {
   border-radius: 32px;
   background-color: #F2F4F3;
   color: #0A0908;
-  padding: 10px 20px;
-  font-size: var(--font-size-p);
+  padding: 5px 20px;
+  font-size: var(--font-size-small);
   border: 1px solid #F2F4F3;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
@@ -887,23 +893,23 @@ html {
 #service .container-fluid #service2 .service-image {
   background-image: url("/image/web1.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 #service .container-fluid #service3 {
   grid-area: 6/1/9/7;
 }
 #service .container-fluid #service3 .service-image {
-  background-image: url("/image/web2.jpg");
+  background-image: url("/image/website.jpg");
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
 }
 #service .container-fluid #service4 {
   grid-area: 3/7/9/10;
 }
 #service .container-fluid #service4 .service-image {
-  background-image: url("/image/web3.jpg");
+  background-image: url("/image/UI.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -912,7 +918,7 @@ html {
   grid-area: 3/10/9/13;
 }
 #service .container-fluid #service5 .service-image {
-  background-image: url("/image/web5.jpg");
+  background-image: url("/image/custom.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1082,7 +1088,7 @@ html {
 }
 
 footer {
-  height: 90dvh;
+  height: 97dvh;
   overflow: hidden;
 }
 footer .container-fluid {
@@ -1096,41 +1102,119 @@ footer .container-fluid #cssportal-grid {
   width: 100%;
   height: 100%;
 }
-footer .container-fluid #div9 {
+footer .container-fluid #cssportal-grid .footer-div {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  color: #F2F4F3;
+  transition: all 0.5s ease-in-out;
+}
+footer .container-fluid #cssportal-grid .footer-div h1 {
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 2px;
+  font-size: clamp(2rem, 5vw, 20rem);
+  text-align: center;
+}
+footer .container-fluid #cssportal-grid .footer-div p {
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 1px;
+  font-size: var(--font-size-p);
+  text-align: center;
+}
+footer .container-fluid #div10 {
   grid-area: 1/1/13/13;
-  background-color: rgba(155, 10, 22, 0.5);
+  border-radius: 50px;
+  background-image: url("/image/footer.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 footer .container-fluid #div1 {
-  grid-area: 3/3/6/11;
-  background-color: rgba(30, 70, 205, 0.5);
+  grid-area: 2/4/3/10;
+  justify-content: flex-end;
 }
 footer .container-fluid #div2 {
-  grid-area: 2/5/3/9;
-  background-color: rgba(59, 65, 187, 0.5);
+  grid-area: 3/3/5/11;
 }
 footer .container-fluid #div3 {
-  grid-area: 7/3/11/5;
-  background-color: rgba(46, 192, 251, 0.5);
+  grid-area: 5/6/6/8;
+  border: 3px solid #F2F4F3;
+}
+footer .container-fluid #div3 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
 }
 footer .container-fluid #div4 {
-  grid-area: 7/5/11/7;
-  background-color: rgba(173, 69, 120, 0.5);
+  grid-area: 7/3/11/5;
 }
 footer .container-fluid #div5 {
-  grid-area: 7/7/11/9;
-  background-color: rgba(115, 127, 208, 0.5);
+  grid-area: 7/5/11/7;
 }
 footer .container-fluid #div6 {
-  grid-area: 7/9/11/11;
-  background-color: rgba(88, 170, 178, 0.5);
+  grid-area: 7/7/11/9;
+}
+footer .container-fluid #div6 .p-head {
+  font-size: var(--font-size-p);
+  font-weight: 600;
 }
 footer .container-fluid #div7 {
-  grid-area: 12/2/13/4;
-  background-color: rgba(51, 235, 93, 0.5);
+  grid-area: 7/9/11/11;
+}
+footer .container-fluid #div7 .p-head {
+  font-size: var(--font-size-p);
+  font-weight: 600;
 }
 footer .container-fluid #div8 {
+  grid-area: 12/2/13/4;
+}
+footer .container-fluid #div9 {
   grid-area: 12/10/13/12;
-  background-color: rgba(174, 74, 188, 0.5);
+}
+footer .container-fluid #div4 ul,
+footer .container-fluid #div5 ul,
+footer .container-fluid #div6 ul,
+footer .container-fluid #div7 ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+footer .container-fluid #div4 ul li,
+footer .container-fluid #div5 ul li,
+footer .container-fluid #div6 ul li,
+footer .container-fluid #div7 ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .container-fluid #div4 ul li a,
+footer .container-fluid #div5 ul li a,
+footer .container-fluid #div6 ul li a,
+footer .container-fluid #div7 ul li a {
+  text-decoration: none;
+  color: #F2F4F3;
+  font-size: var(--font-size-p);
+  transition: color 0.3s ease;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+footer .container-fluid #div4 ul li a:hover,
+footer .container-fluid #div5 ul li a:hover,
+footer .container-fluid #div6 ul li a:hover,
+footer .container-fluid #div7 ul li a:hover {
+  color: #252525;
 }
 
 @media (max-width: 576px) {
@@ -1331,7 +1415,7 @@ footer .container-fluid #div8 {
     animation: fadeIn 1s ease-in-out forwards 3.5s;
   }
   #about {
-    height: 120vh;
+    height: 150vh !important;
   }
   #about #about-grid {
     display: grid;
@@ -1374,7 +1458,7 @@ footer .container-fluid #div8 {
     font-size: var(--font-size-small) !important;
   }
   #portfolio {
-    height: 120vh;
+    height: 150vh !important;
   }
   #portfolio .container-fluid {
     padding-top: 0;
@@ -1436,7 +1520,7 @@ footer .container-fluid #div8 {
     grid-area: 11/2/13/3 !important;
   }
   #service {
-    height: 200dvh !important;
+    height: 350dvh !important;
   }
   #service .container-fluid #service-grid {
     grid-template-rows: repeat(9, 1fr) !important;
@@ -1483,10 +1567,10 @@ footer .container-fluid #div8 {
     grid-area: 8/1/10/4 !important;
   }
   #testimonials {
-    height: 220dvh !important;
+    height: 250dvh !important;
   }
   #testimonials .container-fluid #testimonials-grid {
-    grid-template-rows: repeat(17, 1fr) !important;
+    grid-template-rows: repeat(16, 1fr) !important;
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px !important;
   }
@@ -1535,6 +1619,82 @@ footer .container-fluid #div8 {
   }
   #testimonials .container-fluid #testimonials9 {
     grid-area: 17/1/15/3 !important;
+  }
+  footer {
+    height: 120dvh;
+    overflow: hidden;
+  }
+  footer .container-fluid {
+    padding-top: 0;
+  }
+  footer .container-fluid #cssportal-grid {
+    display: grid;
+    grid-template-rows: repeat(12, 1fr) !important;
+    grid-template-columns: repeat(6, 1fr) !important;
+    gap: 10px !important;
+  }
+  footer .container-fluid #cssportal-grid .footer-div {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    color: #F2F4F3;
+    transition: all 0.5s ease-in-out;
+  }
+  footer .container-fluid #cssportal-grid .footer-div h1 {
+    font-size: var(--font-size-p) !important;
+  }
+  footer .container-fluid #cssportal-grid .footer-div p {
+    font-size: var(--font-size-small) !important;
+  }
+  footer .container-fluid #div10 {
+    grid-area: 1/1/13/7 !important;
+  }
+  footer .container-fluid #div1 {
+    grid-area: 2/2/3/6 !important;
+  }
+  footer .container-fluid #div2 {
+    grid-area: 3/2/4/6 !important;
+  }
+  footer .container-fluid #div3 {
+    grid-area: 4/2/5/6 !important;
+  }
+  footer .container-fluid #div4 {
+    grid-area: 6/1/8/4 !important;
+    padding: 20px !important;
+  }
+  footer .container-fluid #div5 {
+    grid-area: 6/4/8/7 !important;
+    padding: 20px !important;
+  }
+  footer .container-fluid #div6 {
+    grid-area: 8/1/12/4 !important;
+    padding: 20px !important;
+  }
+  footer .container-fluid #div7 {
+    grid-area: 8/4/12/7 !important;
+    padding: 20px !important;
+  }
+  footer .container-fluid #div8 {
+    grid-area: 12/1/13/4 !important;
+    padding: 20px !important;
+  }
+  footer .container-fluid #div9 {
+    grid-area: 12/4/13/7 !important;
+    padding: 20px !important;
+  }
+  footer .container-fluid #div4 ul li a,
+  footer .container-fluid #div5 ul li a,
+  footer .container-fluid #div6 ul li a,
+  footer .container-fluid #div7 ul li a {
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+    font-size: var(--font-size-small) !important;
   }
 }
 @media (max-width: 991px) {
@@ -1652,7 +1812,7 @@ footer .container-fluid #div8 {
     margin-bottom: 5px;
   }
   #portfolio {
-    height: 140dvh;
+    height: 150dvh;
   }
   #portfolio .container-fluid {
     padding-top: 0;
@@ -1842,5 +2002,42 @@ footer .container-fluid #div8 {
   }
   #testimonials .container-fluid #testimonials-grid #testimonials9 {
     grid-area: 9/3/11/5;
+  }
+  footer {
+    height: 100dvh;
+    overflow: hidden;
+  }
+  footer .container-fluid {
+    padding-top: 0;
+  }
+  footer .container-fluid #div10 {
+    grid-area: 1/1/13/13;
+  }
+  footer .container-fluid #div1 {
+    grid-area: 2/4/3/10;
+  }
+  footer .container-fluid #div2 {
+    grid-area: 3/4/5/10;
+  }
+  footer .container-fluid #div3 {
+    grid-area: 5/5/6/9;
+  }
+  footer .container-fluid #div4 {
+    grid-area: 6/5/8/7;
+  }
+  footer .container-fluid #div5 {
+    grid-area: 6/7/8/9;
+  }
+  footer .container-fluid #div6 {
+    grid-area: 8/5/12/7;
+  }
+  footer .container-fluid #div7 {
+    grid-area: 8/7/12/9;
+  }
+  footer .container-fluid #div8 {
+    grid-area: 12/2/13/4;
+  }
+  footer .container-fluid #div9 {
+    grid-area: 12/10/13/12;
   }
 }/*# sourceMappingURL=style.css.map */
