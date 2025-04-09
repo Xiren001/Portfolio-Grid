@@ -635,7 +635,7 @@ html {
 }
 #portfolio .container-fluid #portfolio-grid div .portfolio-gradiant h2 {
   font-size: var(--font-size-small);
-  line-height: 1;
+  line-height: 1.2;
   font-weight: 400;
 }
 #portfolio .container-fluid #portfolio-grid div:hover .portfolio-gradiant {
@@ -714,7 +714,7 @@ html {
 }
 #portfolio .container-fluid #portfolio7 {
   grid-area: 5/4/7/5;
-  background-image: url("/image/web7.jpg");
+  background-image: url("/image/edit.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -728,7 +728,7 @@ html {
 }
 #portfolio .container-fluid #portfolio9 {
   grid-area: 3/6/7/7;
-  background-image: url("/image/web2.jpg");
+  background-image: url("/image/fleetvision.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1094,7 +1094,7 @@ footer {
 footer .container-fluid {
   padding-top: 0;
 }
-footer .container-fluid #cssportal-grid {
+footer .container-fluid #footer-grid {
   display: grid;
   grid-template-rows: repeat(12, 1fr);
   grid-template-columns: repeat(12, 1fr);
@@ -1102,7 +1102,7 @@ footer .container-fluid #cssportal-grid {
   width: 100%;
   height: 100%;
 }
-footer .container-fluid #cssportal-grid .footer-div {
+footer .container-fluid #footer-grid .footer-div {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -1113,21 +1113,21 @@ footer .container-fluid #cssportal-grid .footer-div {
   color: #F2F4F3;
   transition: all 0.5s ease-in-out;
 }
-footer .container-fluid #cssportal-grid .footer-div h1 {
+footer .container-fluid #footer-grid .footer-div h1 {
   font-weight: 600;
   line-height: 1;
   letter-spacing: 2px;
   font-size: clamp(2rem, 5vw, 20rem);
   text-align: center;
 }
-footer .container-fluid #cssportal-grid .footer-div p {
+footer .container-fluid #footer-grid .footer-div p {
   font-weight: 400;
   line-height: 1;
   letter-spacing: 1px;
   font-size: var(--font-size-p);
   text-align: center;
 }
-footer .container-fluid #div10 {
+footer .container-fluid #footer10 {
   grid-area: 1/1/13/13;
   border-radius: 50px;
   background-image: url("/image/hand.png");
@@ -1135,19 +1135,19 @@ footer .container-fluid #div10 {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-footer .container-fluid #div1 {
+footer .container-fluid #footer1 {
   grid-area: 2/4/3/10;
   justify-content: flex-end;
 }
-footer .container-fluid #div2 {
+footer .container-fluid #footer2 {
   grid-area: 3/3/5/11;
 }
-footer .container-fluid #div3 {
+footer .container-fluid #footer3 {
   grid-area: 5/6/6/8;
   border: 3px solid #F2F4F3;
   transition: all 0.5s ease-in-out;
 }
-footer .container-fluid #div3 a {
+footer .container-fluid #footer3 a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1156,61 +1156,61 @@ footer .container-fluid #div3 a {
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
-footer .container-fluid #div3 a p {
+footer .container-fluid #footer3 a p {
   transition: all 0.5s ease-in-out;
 }
-footer .container-fluid #div3:hover {
+footer .container-fluid #footer3:hover {
   background-color: #F2F4F3;
 }
-footer .container-fluid #div3:hover a p {
+footer .container-fluid #footer3:hover a p {
   color: #0A0908;
 }
-footer .container-fluid #div4 {
+footer .container-fluid #footer4 {
   grid-area: 7/3/11/5;
 }
-footer .container-fluid #div5 {
+footer .container-fluid #footer5 {
   grid-area: 7/5/11/7;
 }
-footer .container-fluid #div6 {
+footer .container-fluid #footer6 {
   grid-area: 7/7/11/9;
 }
-footer .container-fluid #div6 .p-head {
+footer .container-fluid #footer6 .p-head {
   font-size: var(--font-size-p);
   font-weight: 600;
 }
-footer .container-fluid #div7 {
+footer .container-fluid #footer7 {
   grid-area: 7/9/11/11;
 }
-footer .container-fluid #div7 .p-head {
+footer .container-fluid #footer7 .p-head {
   font-size: var(--font-size-p);
   font-weight: 600;
 }
-footer .container-fluid #div8 {
+footer .container-fluid #footer8 {
   grid-area: 12/2/13/4;
 }
-footer .container-fluid #div9 {
+footer .container-fluid #footer9 {
   grid-area: 12/10/13/12;
 }
-footer .container-fluid #div4 ul,
-footer .container-fluid #div5 ul,
-footer .container-fluid #div6 ul,
-footer .container-fluid #div7 ul {
+footer .container-fluid #footer4 ul,
+footer .container-fluid #footer5 ul,
+footer .container-fluid #footer6 ul,
+footer .container-fluid #footer7 ul {
   list-style: none;
   display: flex;
   flex-direction: column;
 }
-footer .container-fluid #div4 ul li,
-footer .container-fluid #div5 ul li,
-footer .container-fluid #div6 ul li,
-footer .container-fluid #div7 ul li {
+footer .container-fluid #footer4 ul li,
+footer .container-fluid #footer5 ul li,
+footer .container-fluid #footer6 ul li,
+footer .container-fluid #footer7 ul li {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-footer .container-fluid #div4 ul li a,
-footer .container-fluid #div5 ul li a,
-footer .container-fluid #div6 ul li a,
-footer .container-fluid #div7 ul li a {
+footer .container-fluid #footer4 ul li a,
+footer .container-fluid #footer5 ul li a,
+footer .container-fluid #footer6 ul li a,
+footer .container-fluid #footer7 ul li a {
   text-decoration: none;
   color: #F2F4F3;
   font-size: var(--font-size-p);
@@ -1221,10 +1221,10 @@ footer .container-fluid #div7 ul li a {
   justify-content: center;
   text-align: center;
 }
-footer .container-fluid #div4 ul li a:hover,
-footer .container-fluid #div5 ul li a:hover,
-footer .container-fluid #div6 ul li a:hover,
-footer .container-fluid #div7 ul li a:hover {
+footer .container-fluid #footer4 ul li a:hover,
+footer .container-fluid #footer5 ul li a:hover,
+footer .container-fluid #footer6 ul li a:hover,
+footer .container-fluid #footer7 ul li a:hover {
   color: #252525;
 }
 
@@ -1638,13 +1638,13 @@ footer .container-fluid #div7 ul li a:hover {
   footer .container-fluid {
     padding-top: 0;
   }
-  footer .container-fluid #cssportal-grid {
+  footer .container-fluid #footer-grid {
     display: grid;
     grid-template-rows: repeat(12, 1fr) !important;
     grid-template-columns: repeat(6, 1fr) !important;
     gap: 10px !important;
   }
-  footer .container-fluid #cssportal-grid .footer-div {
+  footer .container-fluid #footer-grid .footer-div {
     position: relative;
     overflow: hidden;
     display: flex;
@@ -1655,52 +1655,52 @@ footer .container-fluid #div7 ul li a:hover {
     color: #F2F4F3;
     transition: all 0.5s ease-in-out;
   }
-  footer .container-fluid #cssportal-grid .footer-div h1 {
+  footer .container-fluid #footer-grid .footer-div h1 {
     font-size: var(--font-size-p) !important;
   }
-  footer .container-fluid #cssportal-grid .footer-div p {
+  footer .container-fluid #footer-grid .footer-div p {
     font-size: var(--font-size-small) !important;
   }
-  footer .container-fluid #div10 {
+  footer .container-fluid #footer10 {
     grid-area: 1/1/13/7 !important;
   }
-  footer .container-fluid #div1 {
+  footer .container-fluid #footer1 {
     grid-area: 2/2/3/6 !important;
   }
-  footer .container-fluid #div2 {
+  footer .container-fluid #footer2 {
     grid-area: 3/2/4/6 !important;
   }
-  footer .container-fluid #div3 {
+  footer .container-fluid #footer3 {
     grid-area: 4/2/5/6 !important;
   }
-  footer .container-fluid #div4 {
+  footer .container-fluid #footer4 {
     grid-area: 6/1/8/4 !important;
     padding: 20px !important;
   }
-  footer .container-fluid #div5 {
+  footer .container-fluid #footer5 {
     grid-area: 6/4/8/7 !important;
     padding: 20px !important;
   }
-  footer .container-fluid #div6 {
+  footer .container-fluid #footer6 {
     grid-area: 8/1/12/4 !important;
     padding: 20px !important;
   }
-  footer .container-fluid #div7 {
+  footer .container-fluid #footer7 {
     grid-area: 8/4/12/7 !important;
     padding: 20px !important;
   }
-  footer .container-fluid #div8 {
+  footer .container-fluid #footer8 {
     grid-area: 12/1/13/4 !important;
     padding: 20px !important;
   }
-  footer .container-fluid #div9 {
+  footer .container-fluid #footer9 {
     grid-area: 12/4/13/7 !important;
     padding: 20px !important;
   }
-  footer .container-fluid #div4 ul li a,
-  footer .container-fluid #div5 ul li a,
-  footer .container-fluid #div6 ul li a,
-  footer .container-fluid #div7 ul li a {
+  footer .container-fluid #footer4 ul li a,
+  footer .container-fluid #footer5 ul li a,
+  footer .container-fluid #footer6 ul li a,
+  footer .container-fluid #footer7 ul li a {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
     white-space: nowrap !important;
@@ -2021,34 +2021,34 @@ footer .container-fluid #div7 ul li a:hover {
   footer .container-fluid {
     padding-top: 0;
   }
-  footer .container-fluid #div10 {
+  footer .container-fluid #footer10 {
     grid-area: 1/1/13/13;
   }
-  footer .container-fluid #div1 {
+  footer .container-fluid #footer1 {
     grid-area: 2/4/3/10;
   }
-  footer .container-fluid #div2 {
+  footer .container-fluid #footer2 {
     grid-area: 3/4/5/10;
   }
-  footer .container-fluid #div3 {
+  footer .container-fluid #footer3 {
     grid-area: 5/5/6/9;
   }
-  footer .container-fluid #div4 {
+  footer .container-fluid #footer4 {
     grid-area: 6/5/8/7;
   }
-  footer .container-fluid #div5 {
+  footer .container-fluid #footer5 {
     grid-area: 6/7/8/9;
   }
-  footer .container-fluid #div6 {
+  footer .container-fluid #footer6 {
     grid-area: 8/5/12/7;
   }
-  footer .container-fluid #div7 {
+  footer .container-fluid #footer7 {
     grid-area: 8/7/12/9;
   }
-  footer .container-fluid #div8 {
+  footer .container-fluid #footer8 {
     grid-area: 12/2/13/4;
   }
-  footer .container-fluid #div9 {
+  footer .container-fluid #footer9 {
     grid-area: 12/10/13/12;
   }
 }/*# sourceMappingURL=style.css.map */

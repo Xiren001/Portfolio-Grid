@@ -740,7 +740,7 @@ html {
 
                     h2 {
                         font-size: var(--font-size-small);
-                        line-height: 1;
+                        line-height: 1.2;
                         font-weight: 400;
                     }
                 }
@@ -836,7 +836,7 @@ html {
 
         #portfolio7 {
             grid-area: 5 / 4 / 7 / 5;
-            background-image: url('/image/web7.jpg');
+            background-image: url('/image/edit.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -852,7 +852,7 @@ html {
 
         #portfolio9 {
             grid-area: 3 / 6 / 7 / 7;
-            background-image: url('/image/web2.jpg');
+            background-image: url('/image/fleetvision.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1299,7 +1299,7 @@ footer {
     .container-fluid {
         padding-top: 0;
 
-        #cssportal-grid {
+        #footer-grid {
             display: grid;
             grid-template-rows: repeat(12, 1fr);
             grid-template-columns: repeat(12, 1fr);
@@ -1336,7 +1336,7 @@ footer {
             }
         }
 
-        #div10 {
+        #footer10 {
             grid-area: 1 / 1 / 13 / 13;
             border-radius: 50px;
             background-image: url('/image/hand.png');
@@ -1345,16 +1345,16 @@ footer {
             background-repeat: no-repeat;
         }
 
-        #div1 {
+        #footer1 {
             grid-area: 2 / 4 / 3 / 10;
             justify-content: flex-end;
         }
 
-        #div2 {
+        #footer2 {
             grid-area: 3 / 3 / 5 / 11;
         }
 
-        #div3 {
+        #footer3 {
             grid-area: 5 / 6 / 6 / 8;
             border: 3px solid $text-color;
             transition: all .5s ease-in-out;
@@ -1382,15 +1382,15 @@ footer {
             }
         }
 
-        #div4 {
+        #footer4 {
             grid-area: 7 / 3 / 11 / 5;
         }
 
-        #div5 {
+        #footer5 {
             grid-area: 7 / 5 / 11 / 7;
         }
 
-        #div6 {
+        #footer6 {
             grid-area: 7 / 7 / 11 / 9;
 
             .p-head {
@@ -1399,7 +1399,7 @@ footer {
             }
         }
 
-        #div7 {
+        #footer7 {
             grid-area: 7 / 9 / 11 / 11;
 
             .p-head {
@@ -1408,18 +1408,18 @@ footer {
             }
         }
 
-        #div8 {
+        #footer8 {
             grid-area: 12 / 2 / 13 / 4;
         }
 
-        #div9 {
+        #footer9 {
             grid-area: 12 / 10 / 13 / 12;
         }
 
-        #div4,
-        #div5,
-        #div6,
-        #div7 {
+        #footer4,
+        #footer5,
+        #footer6,
+        #footer7 {
             ul {
                 list-style: none;
                 display: flex;
@@ -2059,7 +2059,7 @@ footer {
         .container-fluid {
             padding-top: 0;
 
-            #cssportal-grid {
+            #footer-grid {
                 display: grid;
                 grid-template-rows: repeat(12, 1fr) !important;
                 grid-template-columns: repeat(6, 1fr) !important;
@@ -2086,56 +2086,56 @@ footer {
                 }
             }
 
-            #div10 {
+            #footer10 {
                 grid-area: 1 / 1 / 13 / 7 !important;
             }
 
-            #div1 {
+            #footer1 {
                 grid-area: 2 / 2 / 3 / 6 !important;
             }
 
-            #div2 {
+            #footer2 {
                 grid-area: 3 / 2 / 4 / 6 !important;
             }
 
-            #div3 {
+            #footer3 {
                 grid-area: 4 / 2 / 5 / 6 !important;
             }
 
-            #div4 {
+            #footer4 {
                 grid-area: 6 / 1 / 8 / 4 !important;
                 padding: $padding !important;
             }
 
-            #div5 {
+            #footer5 {
                 grid-area: 6 / 4 / 8 / 7 !important;
                 padding: $padding !important;
             }
 
-            #div6 {
+            #footer6 {
                 grid-area: 8 / 1 / 12 / 4 !important;
                 padding: $padding !important;
             }
 
-            #div7 {
+            #footer7 {
                 grid-area: 8 / 4 / 12 / 7 !important;
                 padding: $padding !important;
             }
 
-            #div8 {
+            #footer8 {
                 grid-area: 12 / 1 / 13 / 4 !important;
                 padding: $padding !important;
             }
 
-            #div9 {
+            #footer9 {
                 grid-area: 12 / 4 / 13 / 7 !important;
                 padding: $padding !important;
             }
 
-            #div4,
-            #div5,
-            #div6,
-            #div7 {
+            #footer4,
+            #footer5,
+            #footer6,
+            #footer7 {
                 ul {
 
                     li {
@@ -2613,43 +2613,43 @@ footer {
         .container-fluid {
             padding-top: 0;
 
-            #div10 {
+            #footer10 {
                 grid-area: 1 / 1 / 13 / 13;
             }
 
-            #div1 {
+            #footer1 {
                 grid-area: 2 / 4 / 3 / 10;
             }
 
-            #div2 {
+            #footer2 {
                 grid-area: 3 / 4 / 5 / 10;
             }
 
-            #div3 {
+            #footer3 {
                 grid-area: 5 / 5 / 6 / 9;
             }
 
-            #div4 {
+            #footer4 {
                 grid-area: 6 / 5 / 8 / 7;
             }
 
-            #div5 {
+            #footer5 {
                 grid-area: 6 / 7 / 8 / 9;
             }
 
-            #div6 {
+            #footer6 {
                 grid-area: 8 / 5 / 12 / 7;
             }
 
-            #div7 {
+            #footer7 {
                 grid-area: 8 / 7 / 12 / 9;
             }
 
-            #div8 {
+            #footer8 {
                 grid-area: 12 / 2 / 13 / 4;
             }
 
-            #div9 {
+            #footer9 {
                 grid-area: 12 / 10 / 13 / 12;
             }
         }
