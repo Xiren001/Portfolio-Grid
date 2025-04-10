@@ -486,7 +486,7 @@ html {
   background-color: #F2F4F3;
   justify-content: center;
   align-items: center;
-  transform: translateX(80px);
+  transform: translateX(100px);
   white-space: nowrap;
   z-index: 2;
   transition: transform 0.3s ease-in-out;
@@ -686,21 +686,21 @@ html {
 }
 #portfolio .container-fluid #portfolio3 {
   grid-area: 3/1/7/3;
-  background-image: url("/image/web.jpg");
+  background-image: url("/image/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #portfolio .container-fluid #portfolio4 {
   grid-area: 3/3/5/4;
-  background-image: url("/image/web3.jpg");
+  background-image: url("/image/reponsive.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 #portfolio .container-fluid #portfolio5 {
   grid-area: 5/3/7/4;
-  background-image: url("/image/web5.jpg");
+  background-image: url("/image/dk.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -721,7 +721,7 @@ html {
 }
 #portfolio .container-fluid #portfolio8 {
   grid-area: 3/5/7/6;
-  background-image: url("/image/web1.jpg");
+  background-image: url("/image/ux.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
