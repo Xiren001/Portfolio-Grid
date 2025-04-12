@@ -427,6 +427,12 @@ html {
             text-decoration: none;
             transition: all 0.3s ease;
             padding: 0 $padding + 50px 0 0;
+            background-image: url('../image/logo-w.png');
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            width:50px;
+            height:50px;
         }
 
         // Navigation Links
