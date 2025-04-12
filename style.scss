@@ -12,21 +12,21 @@
 
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('/fonts/Reospec.woff2') format('woff2');
+    src: url('fonts/Reospec.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Roboto';
-    src: url('/fonts/Roboto-Bold.ttf') format('truetype');
+    src: url('fonts/Roboto-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
@@ -34,14 +34,14 @@
 
 @font-face {
     font-family: 'NeueMontreal';
-    src: url('/fonts/NeueMontreal-Bold.otf') format('truetype');
+    src: url('fonts/NeueMontreal-Bold.otf') format('truetype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'NeueMontreal';
-    src: url('/fonts/NeueMontreal-Regular.otf') format('truetype');
+    src: url('fonts/NeueMontreal-Regular.otf') format('truetype');
     font-weight: 400;
     font-style: normal;
 }
@@ -209,7 +209,7 @@ html {
     #hero-bg {
         grid-area: 1 / 1 / 13 / 13;
         border-radius: 50px;
-        background-image: url('/image/hand.png');
+        background-image: url('image/hand.png');
         // background-image: url('/image/15405592.png');
         background-size: cover;
         background-position: bottom;
@@ -627,7 +627,7 @@ html {
 
     #about5 {
         grid-area: 1 / 7 / 7 / 13;
-        background-image: url('/image/me.png');
+        background-image: url('image/me.png');
         background-size: cover;
         background-position: top;
         background-repeat: no-repeat;
@@ -804,7 +804,7 @@ html {
 
         #portfolio3 {
             grid-area: 3 / 1 / 7 / 3;
-            background-image: url('/image/hero.png');
+            background-image: url('image/hero.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -812,7 +812,7 @@ html {
 
         #portfolio4 {
             grid-area: 3 / 3 / 5 / 4;
-            background-image: url('/image/reponsive.png');
+            background-image: url('image/reponsive.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -820,7 +820,7 @@ html {
 
         #portfolio5 {
             grid-area: 5 / 3 / 7 / 4;
-            background-image: url('/image/dk.png');
+            background-image: url('image/dk.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -828,7 +828,7 @@ html {
 
         #portfolio6 {
             grid-area: 3 / 4 / 5 / 5;
-            background-image: url('/image/web6.jpg');
+            background-image: url('image/web6.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -836,7 +836,7 @@ html {
 
         #portfolio7 {
             grid-area: 5 / 4 / 7 / 5;
-            background-image: url('/image/edit.png');
+            background-image: url('image/edit.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -844,7 +844,7 @@ html {
 
         #portfolio8 {
             grid-area: 3 / 5 / 7 / 6;
-            background-image: url('/image/ux.png');
+            background-image: url('image/ux.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -852,7 +852,7 @@ html {
 
         #portfolio9 {
             grid-area: 3 / 6 / 7 / 7;
-            background-image: url('/image/fleetvision.png');
+            background-image: url('image/fleetvision.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1048,7 +1048,7 @@ html {
             grid-area: 3 / 1 / 6 / 7;
 
             .service-image {
-                background-image: url('/image/web1.jpg');
+                background-image: url('image/web1.jpg');
                 background-size: cover;
                 background-position: top;
                 background-repeat: no-repeat;
@@ -1059,7 +1059,7 @@ html {
             grid-area: 6 / 1 / 9 / 7;
 
             .service-image {
-                background-image: url('/image/website.jpg');
+                background-image: url('image/website.jpg');
                 background-size: cover;
                 background-position: top;
                 background-repeat: no-repeat;
@@ -1070,7 +1070,7 @@ html {
             grid-area: 3 / 7 / 9 / 10;
 
             .service-image {
-                background-image: url('/image/UI.jpg');
+                background-image: url('image/UI.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -1081,7 +1081,7 @@ html {
             grid-area: 3 / 10 / 9 / 13;
 
             .service-image {
-                background-image: url('/image/custom.jpg');
+                background-image: url('image/custom.jpg');
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
@@ -1191,7 +1191,7 @@ html {
                 grid-area: 1 / 1 / 3 / 3;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1202,7 +1202,7 @@ html {
                 grid-area: 1 / 3 / 3 / 5;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1213,7 +1213,7 @@ html {
                 grid-area: 1 / 5 / 3 / 7;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1224,7 +1224,7 @@ html {
                 grid-area: 3 / 1 / 5 / 3;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1244,7 +1244,7 @@ html {
                 grid-area: 3 / 5 / 5 / 7;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1255,7 +1255,7 @@ html {
                 grid-area: 5 / 1 / 7 / 3;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1266,7 +1266,7 @@ html {
                 grid-area: 5 / 3 / 7 / 5;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1277,7 +1277,7 @@ html {
                 grid-area: 5 / 5 / 7 / 7;
 
                 .testimonial-image {
-                    background-image: url('/image/default.png');
+                    background-image: url('image/default.png');
                     background-size: cover;
                     background-position: center;
                     background-repeat: no-repeat;
@@ -1339,7 +1339,7 @@ footer {
         #footer10 {
             grid-area: 1 / 1 / 13 / 13;
             border-radius: 50px;
-            background-image: url('/image/hand.png');
+            background-image: url('image/hand.png');
             background-size: cover;
             background-position: bottom;
             background-repeat: no-repeat;
